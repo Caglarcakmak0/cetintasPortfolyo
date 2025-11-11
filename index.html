@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koray Çetintaş - Dijital Dönüşüm Mimarı & ERP Danışmanı">
+    <title>Koray Çetintaş | Dijital Dönüşüm Mimarı & ERP Danışmanı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">Koray Çetintaş</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#home" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="about.html" class="nav-link">Hakkımda</a></li>
+                    <li><a href="#sectors" class="nav-link">Sektörler</a></li>
+                    <li><a href="blog.html" class="nav-link">İçgörüler</a></li>
+                    <li><a href="#contact" class="nav-link">İletişim</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    
+                    <h1 class="hero-title">
+                        Dijital Dönüşüm Mimarı & <br>
+                        <span class="gradient-text">ERP Danışmanı</span>
+                    </h1>
+                    <p class="hero-description">
+                        Savunma, üretim ve hizmet sektörlerinde ERP ve dijital dönüşüm projelerini uçtan uca tasarlayan teknoloji lideri.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">🇹🇷</span>
+                            <span class="stat-text">Türkiye & KKTC odağı</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏭</span>
+                            <span class="stat-text">Üretim & Savunma ağırlıklı</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⚡</span>
+                            <span class="stat-text">Dijital dönüşüm & ERP projeleri</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">ERP Danışmanlığı Talep Et</a>
+                        <a href="#about" class="btn btn-secondary">Profesyonel Profilimi İncele</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/koraygemini.jpg" alt="Koray Çetintaş" class="profile-image">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- Referans Firmalar / Logos Marquee -->
+    <section class="clients-section" id="clientsSection">
+        <!-- Content will be dynamically loaded by clients-marquee.js -->
+    </section>
+
+    <!-- Hakkımda Card -->
+    <section id="about" class="about-preview">
+        <div class="container">
+            <div class="about-card">
+                <div class="about-image">
+                    <img src="assets/koraygemini.jpg" alt="Koray Çetintaş">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Hakkımda</h2>
+                    <div class="role-badges">
+                        <span class="role-badge">Dijital Dönüşüm Mimarı</span>
+                        <span class="role-badge">ERP Danışmanı</span>
+                        <span class="role-badge">Bağımsız YK Üyesi</span>
+                    </div>
+                    <p class="about-text">
+                        Dijital dönüşüm, ERP, yapay zekâ, IoT ve endüstriyel elektronik alanlarında; Türkiye ve Kuzey Kıbrıs'ta faaliyet gösteren işletmelere stratejik yol arkadaşlığı yapıyorum. Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.
+                    </p>
+                    <a href="about.html" class="btn btn-outline">Tümünü Gör</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sektörler Section -->
+    <section id="sectors" class="sectors-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sektörler & Öne Çıkan Proje Türleri</h2>
+                <p class="section-description">
+                    Farklı sektörlerde yürüttüğüm projelerin ortak noktası; karmaşık sistemleri sadeleştirmek ve kurumun gerçek ihtiyacına uygun dijital çözümler tasarlamaktır.
+                </p>
+            </div>
+            
+            <!-- Swiper -->
+            <div class="swiper sectorsSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Sector 1 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Savunma Sanayi</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Yüksek regülasyonlu, kalite ve izlenebilirlik gerektiren yapılarda ERP ve dijital dönüşüm projeleri.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>Ürün ağaçları ve üretim izlenebilirliği</li>
+                                        <li>Kalite, dokümantasyon ve iç denetim entegrasyonu</li>
+                                        <li>Tedarik zinciri ve sözleşme yönetimi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sector 2 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Üretim Sektörü</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Makine parkı, IoT ve üretim verisini ERP ile aynı çatı altında birleştiren projeler.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>MRP, kapasite planlama ve çizelgeleme</li>
+                                        <li>OEE ve üretim verimliliği takibi</li>
+                                        <li>IoT & saha verisi entegrasyonu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sector 3 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Gıda ve Hızlı Tüketim (FMCG)</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Son kullanma tarihi, parti takibi ve hızlı dağıtım gerektiren FMCG sektörüne özel ERP çözümleri.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>Parti ve seri numarası takibi</li>
+                                        <li>Depo yönetimi ve raf ömrü kontrolü</li>
+                                        <li>Hızlı sipariş ve dağıtım entegrasyonu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sector 4 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Profesyonel Hizmetler</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Danışmanlık, hukuk, muhasebe ve mühendislik firmalarına özel proje ve kaynak yönetimi çözümleri.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>Proje bazlı maliyet ve zaman takibi</li>
+                                        <li>Kaynak planlama ve kapasite yönetimi</li>
+                                        <li>Müşteri portföyü ve CRM entegrasyonu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sector 5 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Sağlık Hizmetleri</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Hasta yönetimi, medikal stok takibi ve uyumluluk gereksinimlerini karşılayan sağlık sektörü çözümleri.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>Hasta kayıt ve randevu yönetimi</li>
+                                        <li>Medikal cihaz ve ilaç stok takibi</li>
+                                        <li>KVKK ve sağlık regülasyonları uyumu</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sector 6 -->
+                    <div class="swiper-slide">
+                        <div class="sector-card group">
+                            <div class="sector-bg" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200');"></div>
+                            <div class="sector-overlay">
+                                <h3 class="sector-title">Lojistik ve Dağıtım</h3>
+                                <div class="sector-details">
+                                    <p class="sector-description">
+                                        Depo, filo ve sevkiyat süreçlerini tek platformda yöneten lojistik operasyon çözümleri.
+                                    </p>
+                                    <ul class="sector-features">
+                                        <li>Araç ve rota optimizasyonu</li>
+                                        <li>Depo yönetimi ve barkod sistemi</li>
+                                        <li>Gerçek zamanlı sevkiyat takibi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / İçgörüler Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">İçgörüler & Yazılar</h2>
+                <p class="section-description">
+                    ERP, dijital dönüşüm, savunma sanayi ve üretim odaklı seçimlerinizde yol göstermesi için hazırladığım içerikler.
+                </p>
+            </div>
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-category">Dijital Dönüşüm</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Savunma Sanayinde ERP Seçerken Dikkat Edilmesi Gerekenler</h3>
+                        <p class="blog-excerpt">
+                            Sert regülasyonlar, izlenebilirlik ve kalite süreçleri varken ERP nasıl konumlandırılmalı?
+                        </p>
+                        <a href="blog.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-category">ERP Uygulamaları</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Türkiye & KKTC Arasında Dijital Veri Köprüsü Kurmak</h3>
+                        <p class="blog-excerpt">
+                            Didoda çatısı altında kurguladığım iki ülke arasında veri ve süreç bütünlüğü yaklaşımı.
+                        </p>
+                        <a href="blog.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <div class="blog-category">Teknoloji Trendleri</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">ERP Projelerinde Neden "Teknoloji" Tek Başına Yetmez?</h3>
+                        <p class="blog-excerpt">
+                            İnsan, süreç ve kültür boyutunu dahil etmeden ERP projeleri neden tıkanıyor?
+                        </p>
+                        <a href="blog.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">İletişim & Randevu</h2>
+                    <p class="contact-description">
+                        ERP projesi, dijital dönüşüm yol haritası ya da yönetim kurulu düzeyinde teknoloji danışmanlığı ihtiyacınız varsa benimle iletişime geçebilirsiniz.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>E-posta</h4>
+                                <a href="mailto:info@cetintas.com.tr">info@cetintas.com.tr</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Lokasyonlar</h4>
+                                <p>🇹🇷 İstanbul • 🇨🇾 KKTC • 🇬🇧 Londra • 🇺🇸 San Francisco</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="#" target="_blank">Profil Linki</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" name="email" required placeholder="ornek@firma.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Şirket Adı</label>
+                        <input type="text" id="company" name="company" placeholder="Şirket adı">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Konu</label>
+                        <input type="text" id="subject" name="subject" placeholder="Örn: ERP değerlendirme talebi">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Kısaca ihtiyacınızı paylaşabilirsiniz."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Mesajı Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Presence Map -->
+    <section class="map-compact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🌍 Global Operasyonlarımız</h2>
+                <p class="section-description">
+                    4 kıtada, 4 ülkede faaliyet gösteren şirketlerimiz ile dijital dönüşüm hizmetleri sunuyoruz.
+                </p>
+            </div>
+            <div class="map-content-wrapper">
+                <!-- Location Cards - Mobile'da üstte -->
+                <div class="map-locations-compact">
+                    <div class="location-compact" data-location="turkey">
+                        <span class="location-flag-large">🇹🇷</span>
+                        <div class="location-info">
+                            <strong>Türkiye - İstanbul</strong>
+                            <span class="company-name">Didoda Bilgi Teknolojileri A.Ş.</span>
+                            <p class="location-description">Türkiye'deki ana operasyon merkezi olarak ERP, dijital dönüşüm ve kurumsal yazılım projelerini yönetiyoruz. Savunma sanayi ve üretim sektörlerine özel çözümler sunuyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="location-compact" data-location="cyprus">
+                        <span class="location-flag-large">🇨🇾</span>
+                        <div class="location-info">
+                            <strong>KKTC - Lefkoşa</strong>
+                            <span class="company-name">Didoda Bilgi Teknolojileri Ltd.</span>
+                            <p class="location-description">Kuzey Kıbrıs'ta teknoloji danışmanlığı, yazılım geliştirme ve dijital veri köprüsü çözümleri ile bölgesel işletmelere hizmet veriyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="location-compact" data-location="uk">
+                        <span class="location-flag-large">🇬🇧</span>
+                        <div class="location-info">
+                            <strong>İngiltere - Londra</strong>
+                            <span class="company-name">Çetintaş Consulting UK</span>
+                            <p class="location-description">Avrupa pazarında dijital dönüşüm danışmanlığı, stratejik iş geliştirme ve uluslararası ERP projelerinde aktif rol alıyoruz.</p>
+                        </div>
+                    </div>
+                    <div class="location-compact" data-location="usa">
+                        <span class="location-flag-large">🇺🇸</span>
+                        <div class="location-info">
+                            <strong>ABD - San Francisco</strong>
+                            <span class="company-name">Çetintaş Tech Solutions</span>
+                            <p class="location-description">Yapay zeka, IoT ve endüstriyel elektronik çözümlerinde Amerika pazarına özel teknoloji danışmanlığı ve inovasyon projeleri yürütüyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map - Desktop'ta solda, Mobile'da altta -->
+                <div id="compactMap"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Koray Çetintaş</h3>
+                    <p>Dijital Dönüşüm Mimarı & ERP Danışmanı</p>
+                    <p class="footer-subtitle">Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Şirketler</h4>
+                    <ul class="footer-links">
+                        <li>Çetintaş Yazılım Danışmanlık</li>
+                        <li>Didoda Bilgi Teknolojileri A.Ş. (Türkiye)</li>
+                        <li>Didoda Bilgi Teknolojileri Ltd. (KKTC)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmet Alanları</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Dijital Dönüşüm Danışmanlığı</a></li>
+                        <li><a href="#">ERP Sistemleri ve Kurulum</a></li>
+                        <li><a href="#">Bağımsız YK Üyeliği</a></li>
+                        <li><a href="#">IoT & Otomasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:info@cetintas.com.tr" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Koray Çetintaş. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Sectors Swiper Initialization -->
+    <script>
+        const sectorsSwiper = new Swiper('.sectorsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            }
+        });
+    </script>
+    
+    <!-- Compact Map Script -->
+    <script>
+        // Initialize compact map only if element exists
+        if (document.getElementById('compactMap')) {
+            const compactMap = L.map('compactMap', {
+                scrollWheelZoom: false,
+                dragging: true,
+                zoomControl: true
+            }).setView([35.0, 15.0], 2.5);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(compactMap);
+
+            const compactIcon = L.divIcon({
+                className: 'custom-marker',
+                html: '<div style="background: linear-gradient(135deg, #4a90e2 0%, #667eea 100%); width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12]
+            });
+
+            const compactIconActive = L.divIcon({
+                className: 'custom-marker-active',
+                html: '<div style="background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%); width: 32px; height: 32px; border-radius: 50%; border: 4px solid white; box-shadow: 0 4px 16px rgba(245,87,108,0.5); animation: pulse 1.5s ease-in-out infinite;"></div>',
+                iconSize: [32, 32],
+                iconAnchor: [16, 16]
+            });
+
+            const locations = {
+                turkey: { coords: [41.0082, 28.9784], name: '🇹🇷 İstanbul', zoom: 11 },
+                cyprus: { coords: [35.1856, 33.3823], name: '🇨🇾 Lefkoşa', zoom: 11 },
+                uk: { coords: [51.5074, -0.1278], name: '🇬🇧 Londra', zoom: 11 },
+                usa: { coords: [37.7749, -122.4194], name: '🇺🇸 San Francisco', zoom: 11 }
+            };
+
+            // Store markers
+            const markers = {};
+
+            // Add markers to map
+            Object.keys(locations).forEach(key => {
+                const location = locations[key];
+                const marker = L.marker(location.coords, { icon: compactIcon })
+                    .bindPopup(location.name)
+                    .addTo(compactMap);
+                markers[key] = marker;
+            });
+
+            // Add click handlers to location cards
+            document.querySelectorAll('.location-compact').forEach(card => {
+                card.addEventListener('click', function() {
+                    const locationKey = this.getAttribute('data-location');
+                    const location = locations[locationKey];
+                    
+                    if (location) {
+                        // Remove active class from all cards
+                        document.querySelectorAll('.location-compact').forEach(c => {
+                            c.classList.remove('active');
+                        });
+                        
+                        // Add active class to clicked card
+                        this.classList.add('active');
+                        
+                        // Reset all markers to default icon
+                        Object.keys(markers).forEach(key => {
+                            markers[key].setIcon(compactIcon);
+                        });
+                        
+                        // Set active marker
+                        markers[locationKey].setIcon(compactIconActive);
+                        
+                        // Zoom to location with smooth animation
+                        compactMap.flyTo(location.coords, location.zoom, {
+                            duration: 1.5,
+                            easeLinearity: 0.5
+                        });
+                        
+                        // Open popup after animation
+                        setTimeout(() => {
+                            markers[locationKey].openPopup();
+                        }, 1500);
+                    }
+                });
+                
+                // Add hover effect
+                card.style.cursor = 'pointer';
+            });
+
+            // Disable scroll zoom initially, enable on click
+            compactMap.on('click', function() {
+                compactMap.scrollWheelZoom.enable();
+            });
+            compactMap.on('mouseout', function() {
+                compactMap.scrollWheelZoom.disable();
+            });
+        }
+    </script>
+
+    <!-- Clients Marquee Component -->
+    <script src="components/clients-marquee.js"></script>
+    <script>
+        // Clients data - CORS sorunu nedeniyle inline
+        const clientsData = {
+            "row1": [
+                { "id": 1, "name": "Altair Defense", "logo": "assets/logos/altairdefense.jpg" },
+                { "id": 2, "name": "Sarsilmaz", "logo": "assets/logos/sarsılmaz.png" },
+                { "id": 3, "name": "Mertsav", "logo": "assets/logos/mertsav.png" },
+                { "id": 4, "name": "Dünyasan Savunma", "logo": "assets/logos/dünyasan-savunma.jpg" },
+                { "id": 5, "name": "Özer Elektronik", "logo": "assets/logos/özer-elektronik.png" },
+                { "id": 6, "name": "Meditac", "logo": "assets/logos/meditac.jpg" },
+                { "id": 7, "name": "Ağaoğlu", "logo": "assets/logos/Agaoglu_logo-png.png" },
+                { "id": 8, "name": "Karadeniz Holding", "logo": "assets/logos/karadeniz-holing.jpg" },
+                { "id": 9, "name": "Best Elektrik", "logo": "assets/logos/best_elektrik_logo.png" },
+                { "id": 10, "name": "YKK", "logo": "assets/logos/ykk.jpg" }
+            ],
+            "row2": [
+                { "id": 11, "name": "Yünsa", "logo": "assets/logos/yünsa.svg" },
+                { "id": 12, "name": "Knorr", "logo": "assets/logos/knorr.png" },
+                { "id": 13, "name": "Unilever", "logo": "assets/logos/unillever.png" },
+                { "id": 14, "name": "Novartis", "logo": "assets/logos/Novartis-Logo.svg.png" },
+                { "id": 15, "name": "Vitalab", "logo": "assets/logos/vitalab.jpg" },
+                { "id": 16, "name": "AXA Sigorta", "logo": "assets/logos/axa-sigorta.png" },
+                { "id": 17, "name": "Anadolu Sigorta", "logo": "assets/logos/Anadolu_Sigorta_logo.svg.png" },
+                { "id": 18, "name": "Innomind", "logo": "assets/logos/innomindLogo.png" },
+                { "id": 19, "name": "Corning Optik", "logo": "assets/logos/CORNİNG-OPTİK-İLETİŞİM-SAN.-LTD.-ŞTİ..jpg" },
+                { "id": 20, "name": "U4", "logo": "assets/logos/u4.png" }
+            ]
+        };
+        
+        // Initialize Clients Marquee with inline data
+        document.addEventListener('DOMContentLoaded', function() {
+            const clientsMarquee = new ClientsMarquee('#clientsSection');
+            clientsMarquee.initWithData(clientsData);
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

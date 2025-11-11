@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koray Çetintaş Blog - ERP, Dijital Dönüşüm ve Teknoloji İçgörüleri">
+    <title>İçgörüler & Blog | Koray Çetintaş</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Koray Çetintaş</a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="about.html" class="nav-link">Hakkımda</a></li>
+                    <li><a href="index.html#sectors" class="nav-link">Sektörler</a></li>
+                    <li><a href="blog.html" class="nav-link active">İçgörüler</a></li>
+                    <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1 class="page-title">İçgörüler & Yazılar</h1>
+                <p class="page-subtitle">
+                    ERP, dijital dönüşüm, savunma sanayi ve üretim odaklı seçimlerinizde yol göstermesi için hazırladığım içerikler
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Filter -->
+    <section class="blog-filter-section">
+        <div class="container">
+            <div class="blog-filters">
+                <button class="filter-btn active" data-category="all">Tümü</button>
+                <button class="filter-btn" data-category="dijital-donusum">Dijital Dönüşüm</button>
+                <button class="filter-btn" data-category="erp">ERP Uygulamaları</button>
+                <button class="filter-btn" data-category="teknoloji">Teknoloji Trendleri</button>
+                <button class="filter-btn" data-category="savunma">Savunma Sanayi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-page-section">
+        <div class="container">
+            <div class="blog-grid">
+                
+                <!-- Blog Post 1 -->
+                <article class="blog-card" data-category="savunma dijital-donusum">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="blog-category">Dijital Dönüşüm</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 15 Ekim 2025</span>
+                            <span class="blog-read-time">⏱️ 8 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Savunma Sanayinde ERP Seçerken Dikkat Edilmesi Gerekenler</h3>
+                        <p class="blog-excerpt">
+                            Savunma sanayi, yüksek regülasyon, izlenebilirlik ve kalite süreçleri gerektiren bir sektördür. ERP seçiminde kritik başarı faktörleri nelerdir? Ürün ağaçları, dokümantasyon ve iç denetim entegrasyonunda nelere dikkat edilmelidir?
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Savunma Sanayi</span>
+                            <span class="tag">ERP</span>
+                            <span class="tag">İzlenebilirlik</span>
+                        </div>
+                        <a href="blog-savunma-erp.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card" data-category="erp">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);">
+                        <div class="blog-category">ERP Uygulamaları</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 8 Ekim 2025</span>
+                            <span class="blog-read-time">⏱️ 6 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Türkiye & KKTC Arasında Dijital Veri Köprüsü Kurmak</h3>
+                        <p class="blog-excerpt">
+                            Didoda çatısı altında kurguladığım iki ülke arasında veri ve süreç bütünlüğü yaklaşımı. Sınır ötesi iş süreçlerinde ERP entegrasyonu, veri senkronizasyonu ve yasal uyum konularında deneyimlerimi paylaşıyorum.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">ERP Entegrasyon</span>
+                            <span class="tag">Uluslararası</span>
+                            <span class="tag">Veri Yönetimi</span>
+                        </div>
+                        <a href="blog-turkiye-kktc.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card" data-category="teknoloji dijital-donusum">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="blog-category">Teknoloji Trendleri</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 1 Ekim 2025</span>
+                            <span class="blog-read-time">⏱️ 10 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">ERP Projelerinde Neden "Teknoloji" Tek Başına Yetmez?</h3>
+                        <p class="blog-excerpt">
+                            İnsan, süreç ve kültür boyutunu dahil etmeden ERP projeleri neden tıkanıyor? Başarılı dijital dönüşüm için teknolojinin ötesinde nelere odaklanmalıyız? Değişim yönetimi ve kurumsal adaptasyon stratejileri.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Değişim Yönetimi</span>
+                            <span class="tag">ERP</span>
+                            <span class="tag">İnsan Faktörü</span>
+                        </div>
+                        <a href="blog-teknoloji-yetmez.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card" data-category="erp dijital-donusum">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="blog-category">ERP Uygulamaları</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 22 Eylül 2025</span>
+                            <span class="blog-read-time">⏱️ 7 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Üretimde MRP ve Kapasite Planlama: Pratik Yaklaşımlar</h3>
+                        <p class="blog-excerpt">
+                            Malzeme ihtiyaç planlaması (MRP) ve kapasite planlaması süreçlerini ERP üzerinde nasıl optimize edebilirsiniz? Üretim çizelgeleme, darboğaz analizi ve OEE takibi için somut öneriler.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">MRP</span>
+                            <span class="tag">Üretim</span>
+                            <span class="tag">Planlama</span>
+                        </div>
+                        <a href="blog-mrp-planlama.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card" data-category="teknoloji">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <div class="blog-category">Teknoloji Trendleri</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 15 Eylül 2025</span>
+                            <span class="blog-read-time">⏱️ 9 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">IoT ve ERP Entegrasyonu: Akıllı Fabrika Yolculuğu</h3>
+                        <p class="blog-excerpt">
+                            Endüstri 4.0 sürecinde IoT sensörlerinden gelen verileri ERP sisteminize nasıl entegre edebilirsiniz? Gerçek zamanlı üretim takibi, öngörücü bakım ve veri mimarisi tasarımı üzerine deneyimler.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Endüstri 4.0</span>
+                            <span class="tag">Entegrasyon</span>
+                        </div>
+                        <a href="blog-iot-erp.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card" data-category="dijital-donusum">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="blog-category">Dijital Dönüşüm</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 8 Eylül 2025</span>
+                            <span class="blog-read-time">⏱️ 11 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Dijital Dönüşüm Yol Haritası: Nereden Başlamalı?</h3>
+                        <p class="blog-excerpt">
+                            Kurumsal dijital dönüşüm projeleri için adım adım rehber. Mevcut durum analizi, hedef mimari tasarımı, önceliklendirme ve hızlı kazanımlar (quick wins) stratejisi. Gerçek proje örnekleriyle.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Dijital Dönüşüm</span>
+                            <span class="tag">Strateji</span>
+                            <span class="tag">Yol Haritası</span>
+                        </div>
+                        <a href="blog-dijital-yol-haritasi.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 7 -->
+                <article class="blog-card" data-category="erp">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <div class="blog-category">ERP Uygulamaları</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 1 Eylül 2025</span>
+                            <span class="blog-read-time">⏱️ 5 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Workcube vs Odoo: Hangi ERP Sizin İçin Daha Uygun?</h3>
+                        <p class="blog-excerpt">
+                            Türkiye pazarında öne çıkan iki ERP çözümünün kapsamlı karşılaştırması. Maliyet, esneklik, yerelleşme, modüler yapı ve uygulama kolaylığı açısından detaylı analiz.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Workcube</span>
+                            <span class="tag">Odoo</span>
+                            <span class="tag">ERP Seçimi</span>
+                        </div>
+                        <a href="blog-workcube-odoo.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 8 -->
+                <article class="blog-card" data-category="teknoloji dijital-donusum">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);">
+                        <div class="blog-category">Teknoloji Trendleri</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 25 Ağustos 2025</span>
+                            <span class="blog-read-time">⏱️ 12 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Yapay Zeka ve ERP: Karar Destek Sistemlerinin Geleceği</h3>
+                        <p class="blog-excerpt">
+                            Yapay zeka destekli ERP sistemlerinde talep tahmini, stok optimizasyonu ve üretim planlaması nasıl yapılır? Machine learning modellerinin kurumsal sistemlere entegrasyonu üzerine pratik bilgiler.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">Yapay Zeka</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Karar Destek</span>
+                        </div>
+                        <a href="blog-yapay-zeka-erp.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 9 -->
+                <article class="blog-card" data-category="savunma erp">
+                    <div class="blog-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+                        <div class="blog-category">Savunma Sanayi</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">📅 18 Ağustos 2025</span>
+                            <span class="blog-read-time">⏱️ 9 dk okuma</span>
+                        </div>
+                        <h3 class="blog-title">Savunma Sanayinde Ürün Ağacı Yönetimi ve İzlenebilirlik</h3>
+                        <p class="blog-excerpt">
+                            Karmaşık ürün ağaçları (BOM), seri numarası takibi ve komponent izlenebilirliği konularında pratik çözümler. AS9100 ve NATO AQAP standartlarına uyum sağlayan ERP yapılandırması.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="tag">BOM</span>
+                            <span class="tag">İzlenebilirlik</span>
+                            <span class="tag">Kalite</span>
+                        </div>
+                        <a href="blog-urun-agaci.html" class="blog-link">Devamını oku →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <div class="newsletter-card">
+                    <h2>📬 Yeni İçeriklerden Haberdar Olun</h2>
+                    <p>ERP, dijital dönüşüm ve teknoloji trendleri hakkında düzenli içerikler için bültenime abone olun.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="E-posta adresiniz" required>
+                        <button type="submit" class="btn btn-primary">Abone Ol</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="blog-cta-section">
+        <div class="container">
+            <div class="about-cta">
+                <h2>ERP ve Dijital Dönüşüm Danışmanlığı</h2>
+                <p>Projeniz için profesyonel danışmanlık ve uygulama desteği almak ister misiniz?</p>
+                <a href="index.html#contact" class="btn btn-primary">İletişime Geçin</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Koray Çetintaş</h3>
+                    <p>Dijital Dönüşüm Mimarı & ERP Danışmanı</p>
+                    <p class="footer-subtitle">Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Şirketler</h4>
+                    <ul class="footer-links">
+                        <li>Çetintaş Yazılım Danışmanlık</li>
+                        <li>Didoda Bilgi Teknolojileri A.Ş. (Türkiye)</li>
+                        <li>Didoda Bilgi Teknolojileri Ltd. (KKTC)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmet Alanları</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Dijital Dönüşüm Danışmanlığı</a></li>
+                        <li><a href="#">ERP Sistemleri ve Kurulum</a></li>
+                        <li><a href="#">Bağımsız YK Üyeliği</a></li>
+                        <li><a href="#">IoT & Otomasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:info@cetintas.com.tr" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Koray Çetintaş. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog-filter.js"></script>
+</body>
+</html>

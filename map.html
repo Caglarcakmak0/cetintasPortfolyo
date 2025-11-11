@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Koray Çetintaş - Şirket Lokasyonları">
+    <title>Lokasyonlarımız | Koray Çetintaş</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .map-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        .map-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .map-intro h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .map-intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .location-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .location-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .location-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .location-flag {
+            font-size: 1.8rem;
+        }
+        
+        .location-card .company-name {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-card p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0.5rem 0;
+        }
+        
+        /* Custom Leaflet Popup Styling */
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+            padding: 0;
+        }
+        
+        .leaflet-popup-content {
+            margin: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .popup-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+        
+        .popup-company {
+            color: #4a90e2;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .popup-address {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">Koray Çetintaş</a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="about.html" class="nav-link">Hakkımda</a></li>
+                    <li><a href="index.html#sectors" class="nav-link">Sektörler</a></li>
+                    <li><a href="blog.html" class="nav-link">İçgörüler</a></li>
+                    <li><a href="index.html#contact" class="nav-link">İletişim</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-intro">
+                <h1>🌍 Global Operasyonlarımız</h1>
+                <p>
+                    Türkiye, Kuzey Kıbrıs, İngiltere ve ABD'de faaliyet gösteren şirketlerimiz ile 
+                    dijital dönüşüm ve ERP danışmanlığı hizmetlerimizi sunuyoruz.
+                </p>
+            </div>
+            
+            <!-- Interactive Map -->
+            <div id="map"></div>
+            
+            <!-- Location Cards -->
+            <div class="location-cards">
+                <div class="location-card">
+                    <h3><span class="location-flag">🇹🇷</span> Türkiye</h3>
+                    <div class="company-name">Didoda Bilgi Teknolojileri A.Ş.</div>
+                    <p><strong>Şehir:</strong> İstanbul</p>
+                    <p>Türkiye'deki ana operasyon merkezi olarak ERP ve dijital dönüşüm projelerini yönetiyoruz.</p>
+                </div>
+                
+                <div class="location-card">
+                    <h3><span class="location-flag">🇨🇾</span> Kuzey Kıbrıs</h3>
+                    <div class="company-name">Didoda Bilgi Teknolojileri Ltd.</div>
+                    <p><strong>Şehir:</strong> Lefkoşa (Nicosia)</p>
+                    <p>KKTC'de teknoloji danışmanlığı ve yazılım geliştirme hizmetleri sunuyoruz.</p>
+                </div>
+                
+                <div class="location-card">
+                    <h3><span class="location-flag">🇬🇧</span> İngiltere</h3>
+                    <div class="company-name">Çetintaş Consulting UK</div>
+                    <p><strong>Şehir:</strong> Londra</p>
+                    <p>Avrupa pazarında dijital dönüşüm danışmanlığı ve stratejik iş geliştirme faaliyetlerimiz.</p>
+                </div>
+                
+                <div class="location-card">
+                    <h3><span class="location-flag">🇺🇸</span> Amerika (San Francisco)</h3>
+                    <div class="company-name">Çetintaş Tech Solutions</div>
+                    <p><strong>Şehir:</strong> San Francisco, CA</p>
+                    <p>Yapay zeka, IoT ve endüstriyel elektronik çözümlerinde Amerika pazarına hizmet veriyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Koray Çetintaş</h3>
+                    <p>Dijital Dönüşüm Mimarı & ERP Danışmanı</p>
+                    <p class="footer-subtitle">Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Şirketler</h4>
+                    <ul class="footer-links">
+                        <li>Çetintaş Yazılım Danışmanlık</li>
+                        <li>Didoda Bilgi Teknolojileri A.Ş. (Türkiye)</li>
+                        <li>Didoda Bilgi Teknolojileri Ltd. (KKTC)</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmet Alanları</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Dijital Dönüşüm Danışmanlığı</a></li>
+                        <li><a href="#">ERP Sistemleri ve Kurulum</a></li>
+                        <li><a href="#">Bağımsız YK Üyeliği</a></li>
+                        <li><a href="#">IoT & Otomasyon</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:info@cetintas.com.tr" class="social-link" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Koray Çetintaş. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Map Script -->
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([35.0, 25.0], 3);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Custom marker icon
+        const customIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="background: #4a90e2; width: 30px; height: 30px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+        });
+
+        // Define locations
+        const locations = [
+            {
+                name: 'Türkiye - İstanbul',
+                company: 'Didoda Bilgi Teknolojileri A.Ş.',
+                coords: [41.0082, 28.9784],
+                address: 'İstanbul, Türkiye<br>Ana operasyon merkezi',
+                flag: '🇹🇷'
+            },
+            {
+                name: 'Kuzey Kıbrıs - Lefkoşa',
+                company: 'Didoda Bilgi Teknolojileri Ltd.',
+                coords: [35.1856, 33.3823],
+                address: 'Lefkoşa, Kuzey Kıbrıs<br>Teknoloji danışmanlığı merkezi',
+                flag: '🇨🇾'
+            },
+            {
+                name: 'İngiltere - Londra',
+                company: 'Çetintaş Consulting UK',
+                coords: [51.5074, -0.1278],
+                address: 'Londra, İngiltere<br>Avrupa operasyonları',
+                flag: '🇬🇧'
+            },
+            {
+                name: 'ABD - San Francisco',
+                company: 'Çetintaş Tech Solutions',
+                coords: [37.7749, -122.4194],
+                address: 'San Francisco, CA, ABD<br>AI & IoT çözümleri',
+                flag: '🇺🇸'
+            }
+        ];
+
+        // Add markers to map
+        locations.forEach(location => {
+            const marker = L.marker(location.coords, { icon: customIcon }).addTo(map);
+            
+            const popupContent = `
+                <div class="popup-title">${location.flag} ${location.name}</div>
+                <div class="popup-company">${location.company}</div>
+                <div class="popup-address">${location.address}</div>
+            `;
+            
+            marker.bindPopup(popupContent);
+        });
+
+        // Fit map to show all markers
+        const group = L.featureGroup(locations.map(loc => L.marker(loc.coords)));
+        map.fitBounds(group.getBounds().pad(0.1));
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
