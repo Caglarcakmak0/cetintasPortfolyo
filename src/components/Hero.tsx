@@ -10,20 +10,7 @@ const Hero = () => (
           <p className="hero-description">
             Savunma, üretim ve hizmet sektörlerinde ERP ve dijital dönüşüm projelerini uçtan uca tasarlayan teknoloji lideri.
           </p>
-          <div className="hero-stats">
-            <div className="stat-item">
-              <span className="stat-icon">🇹🇷</span>
-              <span className="stat-text">Türkiye & KKTC odağı</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-icon">🏭</span>
-              <span className="stat-text">Üretim & Savunma ağırlıklı</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-icon">⚡</span>
-              <span className="stat-text">Dijital dönüşüm & ERP projeleri</span>
-            </div>
-          </div>
+
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">ERP Danışmanlığı Talep Et</a>
             <a href="#about" className="btn btn-secondary">Profesyonel Profilimi İncele</a>

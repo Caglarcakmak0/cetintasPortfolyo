@@ -1,3 +1,5 @@
+
+import { Link } from 'react-router-dom';
 const AboutPage = () => { 
   return (
     <>
@@ -18,16 +20,36 @@ const AboutPage = () => {
         <div className="container">
           <div className="about-intro">
             <div className="about-intro-image">
-              <img src="/assets/koraygemini.jpg" alt="Koray Çetintaş" />
+              <img src="/assets/koray2.png" alt="Koray Çetintaş" />
             </div>
             <div className="about-intro-content">
+              <div className="intro-header">
+                <h1 className="intro-title">Koray Çetintaş</h1>
+                <p className="intro-subtitle">Teknoloji ve Strateji Uzmanı</p>
+              </div>
               <div className="role-badges">
                 <span className="role-badge">Dijital Dönüşüm Mimarı</span>
                 <span className="role-badge">ERP Danışmanı</span>
                 <span className="role-badge">Bağımsız YK Üyesi</span>
                 <span className="role-badge">Yapay Zekâ & IoT</span>
               </div>
-              <h2>Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.</h2>
+              <div className="intro-mission">
+                <h2>Stratejiyi, insanı ve teknolojiyi aynı çatı altında buluşturarak işletmeler için kalıcı rekabet avantajı sağlayan dijital mimariler tasarlıyorum.</h2>
+                <div className="intro-stats">
+                  <div className="stat-item">
+                    <span className="stat-number">15+</span>
+                    <span className="stat-label">Yıl Deneyim</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-number">200+</span>
+                    <span className="stat-label">Başarılı Proje</span>
+                  </div>
+                  <div className="stat-item">
+                    <span className="stat-number">2</span>
+                    <span className="stat-label">Ülke</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 

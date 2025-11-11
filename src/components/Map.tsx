@@ -30,7 +30,24 @@ const Map: React.FC = () => {
       companyName: 'KKTC Ofis',
       description: 'Kuzey Kıbrıs Türk Cumhuriyeti\'nde ERP ve dijital dönüşüm projeleri',
       coordinates: [35.2, 33.4] as [number, number]
-    }
+    },
+    {
+      id: '3',
+      name: 'San Francisco',
+      flag: '🇺🇸',
+      companyName: 'Silikon Vadisi Ofis',
+      description: 'Silikon Vadisi\'nde yapay zekâ ve inovasyon projeleri',
+      coordinates: [37.7749, -122.4194] as [number, number]
+    },
+    {
+      id: '4',
+      name: 'İngiltere',
+      flag: '🇬🇧',
+      companyName: 'Londra Ofis',
+      description: 'Birleşik Krallık\'ta kurumsal danışmanlık ve stratejik yönetim',
+      coordinates: [51.5074, -0.1278] as [number, number]
+    },
+
   ];
 
   const handleLocationClick = (locationId: string) => {
@@ -43,7 +60,7 @@ const Map: React.FC = () => {
         <div className="section-header">
           <h2 className="section-title">Lokasyonlar</h2>
           <p className="section-description">
-            Türkiye ve Kuzey Kıbrıs'ta hizmet verdiğimiz lokasyonlar
+            Türkiye, KKTC, ABD ve İngiltere'de hizmet verdiğimiz global lokasyonlar
           </p>
         </div>
 
@@ -55,7 +72,6 @@ const Map: React.FC = () => {
                 className={`location-compact ${activeLocation === location.id ? 'active' : ''}`}
                 onClick={() => handleLocationClick(location.id)}
               >
-                <div className="location-flag-large">{location.flag}</div>
                 <div className="location-info">
                   <strong>{location.name}</strong>
                   <span className="company-name">{location.companyName}</span>
@@ -66,8 +82,8 @@ const Map: React.FC = () => {
           </div>
 
           <MapContainer
-            center={[37.0, 34.0]}
-            zoom={6}
+            center={[40.0, 20.0]}
+            zoom={3}
             style={{ height: '500px', width: '100%' }}
             id="compactMap"
           >
@@ -79,7 +95,6 @@ const Map: React.FC = () => {
               <Marker key={location.id} position={location.coordinates}>
                 <Popup>
                   <div style={{ textAlign: 'center', padding: '5px' }}>
-                    <div style={{ fontSize: '1.5rem', marginBottom: '5px' }}>{location.flag}</div>
                     <strong>{location.name}</strong><br />
                     <span style={{ fontSize: '0.9rem', color: '#4a90e2' }}>{location.companyName}</span><br />
                     <span style={{ fontSize: '0.8rem', color: '#64748b' }}>{location.description}</span>

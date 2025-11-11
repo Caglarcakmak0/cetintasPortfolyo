@@ -6,7 +6,7 @@ const About: React.FC = () => {
       <div className="container">
         <div className="about-card">
           <div className="about-image">
-            <img src="/assets/koraygemini.jpg" alt="Koray Çetintaş" />
+            <img src="/assets/koray2.png" alt="Koray Çetintaş" />
           </div>
           <div className="about-content">
             <h2 className="section-title">Hakkımda</h2>
