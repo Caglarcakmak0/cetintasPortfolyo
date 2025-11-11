@@ -39,12 +39,9 @@ class App {
         // Navigation Component
         if (window.Navigation) {
             const navigation = new Navigation();
-            const navContainer = document.getElementById('navigation-container');
-            if (navContainer) {
-                navContainer.innerHTML = navigation.render();
-                navigation.init();
-                this.components.navigation = navigation;
-            }
+            navigation.init();
+            this.components.navigation = navigation;
+            console.log('✅ Navigation initialized');
         }
 
         // Footer Component
@@ -52,6 +49,7 @@ class App {
             const footer = new Footer();
             footer.init();
             this.components.footer = footer;
+            console.log('✅ Footer initialized');
         }
     }
 

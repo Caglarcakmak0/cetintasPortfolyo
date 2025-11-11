@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Test - Koray Çetintaş</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .test-section {
+            padding: 2rem;
+            border: 2px solid #e5e7eb;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+        .test-status {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        .test-success { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+        .test-error { background: #fee2e2; color: #991b1b; border: 1px solid #ef4444; }
+        .test-pending { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Component Test Suite</h1>
+        <p>Bu sayfa tüm component'lerin düzgün çalışıp çalışmadığını test eder.</p>
+        
+        <div id="test-results">
+            <div class="test-status test-pending">Testler başlatılıyor...</div>
+        </div>
+
+        <!-- Navigation Test -->
+        <div class="test-section">
+            <h2>Navigation Component Test</h2>
+            <nav class="navbar">
+                <div class="nav-content">
+                    <div class="logo">
+                        <span class="logo-text">Koray Çetintaş</span>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="#about" class="nav-link">Hakkımda</a></li>
+                    </ul>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Hero Test -->
+        <div class="test-section">
+            <h2>Hero Component Test</h2>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            Dijital Dönüşüm Mimarı & <br>
+                            <span class="gradient-text">ERP Danışmanı</span>
+                        </h1>
+                        <p class="hero-description">
+                            Test description for hero component.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer Test -->
+        <div class="test-section">
+            <h2>Footer Component Test</h2>
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3>Koray Çetintaş</h3>
+                        <p>Dijital Dönüşüm Mimarı & ERP Danışmanı</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; <span class="current-year">2025</span> Koray Çetintaş. Tüm hakları saklıdır.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Component Scripts -->
+    <script src="js/globals/Navigation.js"></script>
+    <script src="js/globals/Footer.js"></script>
+    <script src="js/components/Hero.js"></script>
+    
+    <script>
+        // Test Suite
+        class ComponentTestSuite {
+            constructor() {
+                this.results = [];
+                this.testResultsContainer = document.getElementById('test-results');
+            }
+
+            async runAllTests() {
+                this.updateStatus('Testler başlatılıyor...', 'pending');
+                
+                await this.testComponent('Navigation', () => {
+                    return window.Navigation !== undefined;
+                });
+
+                await this.testComponent('Footer', () => {
+                    return window.Footer !== undefined;
+                });
+
+                await this.testComponent('Hero', () => {
+                    return window.Hero !== undefined;
+                });
+
+                await this.testComponentInitialization();
+                
+                this.displayResults();
+            }
+
+            async testComponent(name, condition) {
+                try {
+                    const result = condition();
+                    this.results.push({
+                        name: `${name} Component Loaded`,
+                        status: result ? 'success' : 'error',
+                        message: result ? 'Component başarıyla yüklendi' : 'Component yüklenemedi'
+                    });
+                } catch (error) {
+                    this.results.push({
+                        name: `${name} Component Test`,
+                        status: 'error',
+                        message: `Hata: ${error.message}`
+                    });
+                }
+            }
+
+            async testComponentInitialization() {
+                try {
+                    // Navigation initialization test
+                    if (window.Navigation) {
+                        const nav = new Navigation();
+                        nav.init();
+                        this.results.push({
+                            name: 'Navigation Initialization',
+                            status: 'success',
+                            message: 'Navigation component başarıyla başlatıldı'
+                        });
+                    }
+
+                    // Footer initialization test
+                    if (window.Footer) {
+                        const footer = new Footer();
+                        footer.init();
+                        this.results.push({
+                            name: 'Footer Initialization',
+                            status: 'success',
+                            message: 'Footer component başarıyla başlatıldı'
+                        });
+                    }
+
+                    // Hero initialization test
+                    if (window.Hero) {
+                        const hero = new Hero('#home');
+                        await hero.init();
+                        this.results.push({
+                            name: 'Hero Initialization',
+                            status: 'success',
+                            message: 'Hero component başarıyla başlatıldı'
+                        });
+                    }
+
+                } catch (error) {
+                    this.results.push({
+                        name: 'Component Initialization',
+                        status: 'error',
+                        message: `Başlatma hatası: ${error.message}`
+                    });
+                }
+            }
+
+            updateStatus(message, status) {
+                this.testResultsContainer.innerHTML = `
+                    <div class="test-status test-${status}">${message}</div>
+                `;
+            }
+
+            displayResults() {
+                const successCount = this.results.filter(r => r.status === 'success').length;
+                const errorCount = this.results.filter(r => r.status === 'error').length;
+                
+                let html = `
+                    <div class="test-status ${errorCount === 0 ? 'test-success' : 'test-error'}">
+                        📊 Test Sonuçları: ${successCount} Başarılı, ${errorCount} Hatalı
+                    </div>
+                `;
+
+                this.results.forEach(result => {
+                    html += `
+                        <div class="test-status test-${result.status}">
+                            ${result.status === 'success' ? '✅' : '❌'} ${result.name}: ${result.message}
+                        </div>
+                    `;
+                });
+
+                this.testResultsContainer.innerHTML = html;
+            }
+        }
+
+        // Testleri çalıştır
+        document.addEventListener('DOMContentLoaded', async () => {
+            const testSuite = new ComponentTestSuite();
+            await testSuite.runAllTests();
+        });
+    </script>
+</body>
+</html>
