@@ -5,6 +5,8 @@ import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import MapPage from './pages/MapPage';
 import { NavItem, SocialLink, FooterLink } from './types';
+import { useEffect } from 'react';
+
 
 const App = () => {
   // Navigation items

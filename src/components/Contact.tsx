@@ -25,16 +25,11 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">İletişim</h2>
-          <p className="section-description">
-            Dijital dönüşüm ve ERP projeleriniz için ücretsiz danışmanlık randevusu alın
-          </p>
-        </div>
 
         <div className="contact-wrapper">
           <div className="contact-info">
-            <h3>Projenizi Konuşalım</h3>
+            <div className="sectors-label">Projenizi Konuşalım</div>
+            <h2 className="sectors-main-title" style={{ marginBottom: 16 }}>İletişim</h2>
             <p className="contact-description">
               Dijital dönüşüm yolculuğunuzda size yardımcı olmak için buradayım. 
               ERP seçimi, implementasyon veya mevcut sistemlerin optimizasyonu için 
