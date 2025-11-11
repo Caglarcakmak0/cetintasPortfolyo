@@ -1,0 +1,106 @@
+{
+  "row1": [
+    {
+      "id": 1,
+      "name": "Altair Defense",
+      "logo": "assets/logos/altairdefense.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sarsilmaz",
+      "logo": "assets/logos/sarsılmaz.png"
+    },
+    {
+      "id": 3,
+      "name": "Mertsav",
+      "logo": "assets/logos/mertsav.png"
+    },
+    {
+      "id": 4,
+      "name": "Dünyasan Savunma",
+      "logo": "assets/logos/dünyasan-savunma.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Özer Elektronik",
+      "logo": "assets/logos/özer-elektronik.png"
+    },
+    {
+      "id": 6,
+      "name": "Meditac",
+      "logo": "assets/logos/meditac.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Ağaoğlu",
+      "logo": "assets/logos/Agaoglu_logo-png.png"
+    },
+    {
+      "id": 8,
+      "name": "Karadeniz Holding",
+      "logo": "assets/logos/karadeniz-holing.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Best Elektrik",
+      "logo": "assets/logos/best_elektrik_logo.png"
+    },
+    {
+      "id": 10,
+      "name": "YKK",
+      "logo": "assets/logos/ykk.jpg"
+    }
+  ],
+  "row2": [
+    {
+      "id": 11,
+      "name": "Yünsa",
+      "logo": "assets/logos/yünsa.svg"
+    },
+    {
+      "id": 12,
+      "name": "Knorr",
+      "logo": "assets/logos/knorr.png"
+    },
+    {
+      "id": 13,
+      "name": "Unilever",
+      "logo": "assets/logos/unillever.png"
+    },
+    {
+      "id": 14,
+      "name": "Novartis",
+      "logo": "assets/logos/Novartis-Logo.svg.png"
+    },
+    {
+      "id": 15,
+      "name": "Vitalab",
+      "logo": "assets/logos/vitalab.jpg"
+    },
+    {
+      "id": 16,
+      "name": "AXA Sigorta",
+      "logo": "assets/logos/axa-sigorta.png"
+    },
+    {
+      "id": 17,
+      "name": "Anadolu Sigorta",
+      "logo": "assets/logos/Anadolu_Sigorta_logo.svg.png"
+    },
+    {
+      "id": 18,
+      "name": "Innomind",
+      "logo": "assets/logos/innomindLogo.png"
+    },
+    {
+      "id": 19,
+      "name": "Corning Optik",
+      "logo": "assets/logos/CORNİNG-OPTİK-İLETİŞİM-SAN.-LTD.-ŞTİ..jpg"
+    },
+    {
+      "id": 20,
+      "name": "U4",
+      "logo": "assets/logos/u4.png"
+    }
+  ]
+}
