@@ -3,9 +3,6 @@
  * Tüm componentleri başlatır ve yönetir
  */
 
-import { APP_CONFIG, API_ENDPOINTS } from './utils/constants.js';
-import { styledLog, createIntersectionObserver } from './utils/helpers.js';
-
 class App {
     constructor() {
         this.components = {};
@@ -14,7 +11,7 @@ class App {
 
     async init() {
         try {
-            styledLog('🚀 Koray Çetintaş Portfolio Starting...', 'color: #2563eb; font-size: 16px; font-weight: bold;');
+            console.log('🚀 Koray Çetintaş Portfolio Starting...');
             
             // Global componentleri başlat
             await this.initGlobalComponents();
@@ -29,16 +26,15 @@ class App {
             this.removeLoadingState();
             
             this.isInitialized = true;
-            styledLog('✅ Application initialized successfully!', 'color: #10b981; font-size: 14px;');
+            console.log('✅ Application initialized successfully!');
             
         } catch (error) {
             console.error('❌ Application initialization failed:', error);
-            styledLog('❌ Application initialization failed!', 'color: #ef4444; font-size: 14px;');
         }
     }
 
     async initGlobalComponents() {
-        styledLog('🌍 Initializing global components...', 'color: #6366f1; font-size: 12px;');
+        console.log('🌍 Initializing global components...');
         
         // Navigation Component
         if (window.Navigation) {
@@ -60,7 +56,7 @@ class App {
     }
 
     async initPageComponents() {
-        styledLog('📄 Initializing page components...', 'color: #6366f1; font-size: 12px;');
+        console.log('📄 Initializing page components...');
         
         // Hero Component
         if (window.Hero) {
@@ -106,7 +102,6 @@ class App {
 
         // Clients Marquee Component
         if (window.ClientsMarquee) {
-            // Clients data - CORS sorunu nedeniyle inline
             const clientsData = {
                 "row1": [
                     { "id": 1, "name": "Altair Defense", "logo": "assets/logos/altairdefense.jpg" },
@@ -141,7 +136,7 @@ class App {
     }
 
     setupEventListeners() {
-        styledLog('⚡ Setting up event listeners...', 'color: #6366f1; font-size: 12px;');
+        console.log('⚡ Setting up event listeners...');
         
         // Intersection Observer for animations
         this.setupAnimationObserver();
@@ -168,7 +163,6 @@ class App {
             });
         }, observerOptions);
 
-        // Observe elements with animation
         const animatedElements = document.querySelectorAll('.sector-card, .blog-card, .expertise-card, .roadmap-step');
         
         animatedElements.forEach(el => {
@@ -202,14 +196,12 @@ class App {
         document.body.classList.add('loaded');
     }
 
-    // Component getter methods
     getComponent(name) {
         return this.components[name];
     }
 
-    // Utility methods
     logComponentStatus() {
-        styledLog('📊 Component Status:', 'color: #8b5cf6; font-size: 12px;');
+        console.log('📊 Component Status:');
         Object.keys(this.components).forEach(key => {
             console.log(`  ✓ ${key}: Initialized`);
         });
@@ -225,9 +217,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.App = app;
     
     // Console message
-    styledLog('👋 Merhaba!', 'font-size: 20px; font-weight: bold; color: #2563eb;');
-    styledLog('Koray Çetintaş - Dijital Dönüşüm Mimarı & ERP Danışmanı', 'font-size: 14px; color: #475569;');
-    styledLog('İletişim: info@cetintas.com.tr', 'font-size: 12px; color: #64748b;');
+    console.log('%c👋 Merhaba!', 'font-size: 20px; font-weight: bold; color: #2563eb;');
+    console.log('%cKoray Çetintaş - Dijital Dönüşüm Mimarı & ERP Danışmanı', 'font-size: 14px; color: #475569;');
+    console.log('%cİletişim: info@cetintas.com.tr', 'font-size: 12px; color: #64748b;');
 });
-
-export default App;
