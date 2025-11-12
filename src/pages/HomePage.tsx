@@ -1,18 +1,25 @@
+import { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
-import ClientsMarquee from '../components/ClientsMarquee';
 import About from '../components/About';
 import Sectors from '../components/Sectors';
 import Blog from '../components/Blog';
-import Map from '../components/Map';
+
+// Lazy loading for heavy components
+const ClientsMarquee = lazy(() => import('../components/ClientsMarquee'));
+const Map = lazy(() => import('../components/Map'));
 
 const HomePage = () => (
   <>
     <Hero />
-    <ClientsMarquee />
+    <Suspense fallback={<div className="component-loading">Yükleniyor...</div>}>
+      <ClientsMarquee />
+    </Suspense>
     <About />
     <Sectors />
     <Blog />
-    <Map />
+    <Suspense fallback={<div className="component-loading">Harita yükleniyor...</div>}>
+      <Map />
+    </Suspense>
   </>
 );
 

@@ -31,6 +31,17 @@
   margin: 0;
 }
 
+/* Component Loading Styles */
+.component-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
 /* ==========================================
    RESET & BASE STYLES
    ========================================== */

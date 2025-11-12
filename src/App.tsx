@@ -15,6 +15,8 @@ const SectorPage = lazy(() => import('./pages/SectorPage'));
 const SectorsListPage = lazy(() => import('./pages/SectorsListPage'));
 
 
+
+
 const App = () => {
   // Navigation items
   const navItems: NavItem[] = [
