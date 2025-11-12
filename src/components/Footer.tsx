@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SocialLink, FooterLink } from '@/types';
+import { Linkedin, Github } from 'lucide-react';
 
 interface FooterProps {
   socialLinks: SocialLink[];
@@ -70,7 +71,7 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
                   <li key={link.id}>
                     {link.url ? (
                       link.url.startsWith('/#') ? (
-                        <Link to={link.url} onClick={(e) => handleFooterLinkClick(e, link.url)}>
+                        <Link to={link.url!} onClick={(e) => handleFooterLinkClick(e, link.url!)}>
                           {link.text}
                         </Link>
                       ) : (
@@ -89,16 +90,16 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
               <h4>Sosyal Medya</h4>
               <div className="social-links">
                 {socialLinks.map((social) => (
-                  <a 
+                  <Link 
                     key={social.id}
-                    href={social.url} 
+                    to={social.url} 
                     className="social-link" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     aria-label={social.label}
                   >
-                    <span dangerouslySetInnerHTML={{ __html: social.icon }} />
-                  </a>
+                    {social.icon === 'linkedin' ? <Linkedin /> : <Github />}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -108,15 +109,7 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
           </div>
         </div>
       </footer>
-      
-      {/* Back to top button */}
-      <button 
-        className={`back-to-top ${showBackToTop ? 'visible' : ''}`} 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label="Başa dön"
-      >
-        ↑
-      </button>
+
     </>
   );
 };

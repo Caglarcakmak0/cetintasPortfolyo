@@ -1,19 +1,16 @@
 
+import Breadcrumb from '@/components/Breadcrumb';
 import { Link } from 'react-router-dom';
 const AboutPage = () => { 
   return (
     <>
-      {/* About Hero */}
-      <section className="about-hero">
-        <div className="container">
-          <div className="about-hero-content">
-            <h1 className="page-title">Hakkımda</h1>
-            <p className="page-subtitle">
-              Kurumsal bakış açısıyla teknoloji mimarisi
-            </p>
-          </div>
-        </div>
-      </section>
+      <Breadcrumb 
+        title="Hakkımda" 
+        breadcrumb={[
+          { label: 'Hakkımda' }
+        ]} 
+        image="/assets/koray2.png" 
+      />  
 
       {/* Full About Content */}
       <section className="about-full">
@@ -64,17 +61,20 @@ const AboutPage = () => {
               Kurucusu olduğu Çetintaş Yazılım Danışmanlık, Didoda Bilgi Teknolojileri Ltd. (KKTC) ve Didoda Bilgi Teknolojileri A.Ş. (Türkiye) aracılığıyla; işletmelerin dijital dönüşüm ve ERP projelerini uçtan uca yöneten, yenilikçi ve sürdürülebilir sistemler tasarlamakta ve hayata geçirmektedir. Ayrıca bağımsız yönetim kurulu üyesi olarak, dijitalleşmenin sadece teknik değil, yönetsel düzeyde de kalıcı olmasını desteklemektedir.
             </p>
 
-            <div className="highlights-section">
-              <h3>Öne Çıkan Başlıklar</h3>
-              <ul className="highlights-list">
-                <li>Kurumsal dijital dönüşüm stratejisi ve sistem tasarımı</li>
-                <li>ERP seçimi, uyarlaması ve entegrasyonu</li>
-                <li>Yapay zekâ tabanlı karar destek sistemleri</li>
-                <li>IoT destekli akıllı fabrika çözümleri</li>
-                <li>Kurumsal yönetişim, risk ve stratejik yönetim</li>
-              </ul>
-            </div>
+            <div style={{height: '50px'}}></div>
+
+
+              <h2 className="section-title">Öne Çıkan Başlıklar</h2>
+              <div className="role-badges" style={{ marginTop: '1rem' }}>
+                <span className="role-badge">Kurumsal dijital dönüşüm stratejisi ve sistem tasarımı</span>
+                <span className="role-badge">ERP seçimi, uyarlaması ve entegrasyonu</span>
+                <span className="role-badge">Yapay zekâ tabanlı karar destek sistemleri</span>
+                <span className="role-badge">IoT destekli akıllı fabrika çözümleri</span>
+                <span className="role-badge">Kurumsal yönetişim, risk ve stratejik yönetim</span>
+              </div>
           </div>
+          <div style={{height: '150px'}}></div>
+
 
           {/* Uzmanlık Alanları */}
           <div className="expertise-section">
