@@ -1,4 +1,3 @@
-import AnimatedContent from "@/animations/AnimatedContent";
 
 const Hero = () => (
   <section id="home" className="hero">
