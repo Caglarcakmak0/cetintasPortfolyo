@@ -4,19 +4,7 @@ const Hero = () => (
   <section id="home" className="hero">
     <div className="container">
       <div className="hero-content">
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={true}
-          duration={1.2}
-          ease="power3.out"
-          initialOpacity={0}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.3}
-        >
-          <div className="hero-text">
+          <div className="hero-text fadeinleftblur">
 
             <h1 className="hero-title">
               Dijital Dönüşüm Mimarı & <br />
@@ -31,23 +19,10 @@ const Hero = () => (
               <a href="#about" className="btn btn-secondary">Profesyonel Profilimi İncele</a>
             </div>
           </div>
-        </AnimatedContent>
-        <AnimatedContent
-          distance={150}
-          direction="horizontal"
-          reverse={false}
-          duration={1.2}
-          ease="power3.out"
-          initialOpacity={0}
-          animateOpacity
-          scale={1.1}
-          threshold={0.2}
-          delay={0.3}
-        >
-          <div className="hero-image">
+
+          <div className="hero-image fadeinrightblur">
             <img src="/assets/koraygemini.jpg" alt="Koray Çetintaş" className="profile-image" />
           </div>
-        </AnimatedContent>
       </div>
     </div>
     <div className="hero-background">
