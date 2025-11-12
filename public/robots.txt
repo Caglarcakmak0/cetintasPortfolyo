@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap konumu
+Sitemap: https://koraycetintas.com/sitemap.xml
+
+# Engellenen dizinler (varsa)
+# Disallow: /admin/
+# Disallow: /private/
+
+# İzin verilen dosya türleri
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+Allow: *.ico
+
+# Crawl delay (sunucu yükünü azaltmak için)
+Crawl-delay: 1

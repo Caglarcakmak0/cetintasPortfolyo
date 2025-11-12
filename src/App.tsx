@@ -1,14 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import BlogPage from './pages/BlogPage';
-import MapPage from './pages/MapPage';
-import ContactPage from './pages/ContactPage';
-import CaseStudyPage from './pages/CaseStudyPage';
-import SectorPage from './pages/SectorPage';
-import SectorsListPage from './pages/SectorsListPage';
+import { PageSEO } from './components/SEO/PageSEO';
 import { NavItem, SocialLink, FooterLink } from './types';
+
+// Lazy loading for pages
+const HomePage = lazy(() => import('./pages/HomePage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const MapPage = lazy(() => import('./pages/MapPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
+const SectorPage = lazy(() => import('./pages/SectorPage'));
+const SectorsListPage = lazy(() => import('./pages/SectorsListPage'));
 
 
 const App = () => {
@@ -42,16 +46,24 @@ const App = () => {
         socialLinks={socialLinks} 
         footerLinks={footerLinks}
       >
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/sectors" element={<SectorsListPage />} />
-          <Route path="/sector/:sectorId" element={<SectorPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/map" element={<MapPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/case-study/:id" element={<CaseStudyPage />} />
-        </Routes>
+        <PageSEO />
+        <Suspense fallback={
+          <div className="page-loading">
+            <div className="loading-spinner"></div>
+            <p>Yükleniyor...</p>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/sectors" element={<SectorsListPage />} />
+            <Route path="/sector/:sectorId" element={<SectorPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/map" element={<MapPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/case-study/:id" element={<CaseStudyPage />} />
+          </Routes>
+        </Suspense>
       </Layout>
     </Router>
   );}

@@ -40,7 +40,7 @@ const SectorPage = () => {
     if (sectorId) {
       // Sektöre ait case study'leri filtrele
       const filtered = caseStudiesData.filter(study => study.id === sectorId);
-      setCaseStudies(filtered);
+      setCaseStudies(filtered as any);
       setSectorTitle(sectorTitles[sectorId] || 'Sektör');
       setHeroImage(sectorImages[sectorId] || '');
     }

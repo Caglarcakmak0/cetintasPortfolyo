@@ -110,6 +110,16 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
         </div>
       </footer>
 
+      {showBackToTop && (
+        <button 
+          className="back-to-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Sayfanın başına dön"
+        >
+          ↑
+        </button>
+      )}
+
     </>
   );
 };
