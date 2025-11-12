@@ -1,0 +1,221 @@
+[
+  {
+    "id": "uretim-sektoru",
+    "title": "Üretim Sektörü",
+    "subtitle": "Dağınık Stok Yönetiminden Gerçek Zamanlı Üretim Kontrolüne",
+    "heroImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920",
+    "challenge": {
+      "title": "Sorun",
+      "description": "Müşteri Profili: Orta Ölçekli Makina Parçası Üreticisi",
+      "points": [
+        "Depo ve üretim arasındaki stok seviyeleri asla birbirini tutmuyordu",
+        "Üretim planlaması Excel tabloları üzerinden yapıldığı için sürekli gecikmeler yaşanıyordu",
+        "Hangi siparişin hangi aşamada olduğunu görmek saatler sürüyordu"
+      ]
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "description": "Entegre ERP sistemi ve gerçek zamanlı üretim kontrolü:",
+      "points": [
+        "Tüm departmanları (satış, satınalma, üretim, depo, sevkiyat) birbirine bağlayan uçtan uca bir ERP sistemi entegrasyonu yapıldı",
+        "Üretim bandına gerçek zamanlı veri girişi sağlayan tablet arayüzleri geliştirildi",
+        "Yönetim için anlık stok, üretim ve verimlilik raporları sunan özel bir dashboard (gösterge paneli) tasarlandı"
+      ]
+    },
+    "result": {
+      "title": "Somut Sonuçlar",
+      "description": "Dijital dönüşümün sağladığı iyileştirmeler:",
+      "metrics": [
+        {
+          "value": "%99.2",
+          "label": "Stok doğruluğu"
+        },
+        {
+          "value": "%40",
+          "label": "Teslimat gecikmeleri azaldı"
+        },
+        {
+          "value": "%90",
+          "label": "Manuel raporlama efor azalması"
+        }
+      ],
+      "additionalBenefits": [
+        "Stok doğruluğu %99.2 seviyesine yükseldi",
+        "Teslimat gecikmeleri %40 oranında azaldı",
+        "Raporlama için harcanan manuel efor %90 ortadan kalktı"
+      ]
+    }
+  },
+  {
+    "id": "lojistik-dagitim",
+    "title": "Lojistik ve Dağıtım",
+    "subtitle": "Manuel Raporlamadan Veriye Dayalı Rota Optimizasyonuna",
+    "heroImage": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1920",
+    "challenge": {
+      "title": "Sorun",
+      "description": "Müşteri Profili: Ulusal Dağıtım Yapan Lojistik Firması",
+      "points": [
+        "Günlük sevkiyat ve teslimat raporlarını toplamak ve analiz etmek bir tam gün sürüyordu",
+        "Araçların yakıt tüketimi ve rota verimliliği etkin bir şekilde ölçülemiyordu",
+        "Müşterilere anlık teslimat bilgisi verilemiyordu"
+      ]
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "description": "İş Zekası platformu ve filo yönetim sistemi:",
+      "points": [
+        "Tüm filo yönetim sistemini merkezi bir veritabanına bağlayan bir İş Zekası (BI) platformu kuruldu",
+        "Saha ekiplerinin mobil cihazlardan anlık veri gönderebildiği bir sistem entegre edildi",
+        "Tarihsel verilere dayalı rota optimizasyonu önerileri sunan bir algoritma geliştirildi"
+      ]
+    },
+    "result": {
+      "title": "Somut Sonuçlar",
+      "description": "Lojistik optimizasyonu sonuçları:",
+      "metrics": [
+        {
+          "value": "5 dk",
+          "label": "Günlük raporlama süresi (8 saatten)"
+        },
+        {
+          "value": "%15",
+          "label": "Yakıt maliyetlerinde tasarruf"
+        },
+        {
+          "value": "%35",
+          "label": "Müşteri memnuniyeti artışı"
+        }
+      ],
+      "additionalBenefits": [
+        "Günlük raporlama süresi 8 saatten 5 dakikaya indi",
+        "Rota optimizasyonu ile yakıt maliyetlerinde %15 tasarruf sağlandı",
+        "Müşteri memnuniyeti, anlık takip imkanı sayesinde %35 arttı"
+      ]
+    }
+  },
+  {
+    "id": "perakende-eticaret",
+    "title": "Perakende ve E-Ticaret",
+    "subtitle": "Ayrık Kanallardan Bütünleşik Müşteri Deneyimine (Omni-Channel)",
+    "heroImage": "https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=1920",
+    "challenge": {
+      "title": "Sorun",
+      "description": "Müşteri Profili: Hem Fiziksel Mağazaları Hem de E-Ticaret Sitesi Olan Giyim Markası",
+      "points": [
+        "E-ticaret sitesinin stoku ile fiziksel mağaza stokları birbirinden tamamen habersizdi",
+        "Müşteri verileri (online alışveriş, mağaza alışverişi) farklı yerlerde tutulduğu için bütüncül bir pazarlama yapılamıyordu",
+        "Sipariş yönetimi büyük ölçüde manueldi ve hatalara açıktı"
+      ]
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "description": "Omni-channel stok yönetimi ve merkezi CRM platformu:",
+      "points": [
+        "Tüm satış kanallarındaki envanteri anlık olarak senkronize eden bir 'omni-channel' stok yönetim sistemi kuruldu",
+        "Müşterilerin tüm alışveriş geçmişini tek bir profilde birleştiren merkezi bir CRM (Müşteri İlişkileri Yönetimi) platformu entegre edildi"
+      ]
+    },
+    "result": {
+      "title": "Somut Sonuçlar",
+      "description": "Omni-channel dönüşümün etkileri:",
+      "metrics": [
+        {
+          "value": "%90",
+          "label": "Stokta yok iptallerinde azalma"
+        },
+        {
+          "value": "%25",
+          "label": "Müşteri sadakati artışı"
+        }
+      ],
+      "additionalBenefits": [
+        "'Stokta yok' nedeniyle iptal edilen siparişler %90 oranında azaldı",
+        "Kişiselleştirilmiş pazarlama kampanyaları ile müşteri sadakati %25 arttı"
+      ]
+    }
+  },
+  {
+    "id": "profesyonel-hizmetler",
+    "title": "Profesyonel Hizmetler",
+    "subtitle": "Proje Kaosundan Kârlılık Analizine",
+    "heroImage": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1920",
+    "challenge": {
+      "title": "Sorun",
+      "description": "Müşteri Profili: Mimarlık ve Mühendislik Ofisi",
+      "points": [
+        "Birden fazla projenin takibi, harcanan zaman ve maliyetlerin hesaplanması Excel üzerinde çok zordu",
+        "Faturalama süreçleri yavaştı ve sık sık hatalar içeriyordu"
+      ]
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "description": "Proje yönetim sistemi ve otomatik faturalama:",
+      "points": [
+        "Proje bazlı görev, zaman ve bütçe takibi yapılabilen bir proje yönetim sistemi kuruldu",
+        "Harcanan zaman çizelgelerini otomatik olarak faturaya dönüştüren bir modül entegre edildi"
+      ]
+    },
+    "result": {
+      "title": "Somut Sonuçlar",
+      "description": "Proje yönetimi verimliliği:",
+      "metrics": [
+        {
+          "value": "1 gün",
+          "label": "Faturalama döngüsü (7 günden)"
+        },
+        {
+          "value": "Anlık",
+          "label": "Proje kârlılık takibi"
+        }
+      ],
+      "additionalBenefits": [
+        "Proje faturalama döngüsü ortalama 7 günden 1 güne indi",
+        "Her projenin anlık kârlılığını takip etme yeteneği kazanıldı"
+      ]
+    }
+  },
+  {
+    "id": "saglik-hizmetleri",
+    "title": "Sağlık Hizmetleri",
+    "subtitle": "Manuel Randevudan Dijital Klinik Yönetimine",
+    "heroImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1920",
+    "challenge": {
+      "title": "Sorun",
+      "description": "Müşteri Profili: Özel Poliklinik",
+      "points": [
+        "Randevular telefonla alınıyor, bu da çakışmalara ve sekreterya üzerinde aşırı yüke neden oluyordu",
+        "Hasta kayıtları ve geçmişi farklı dosyalarda tutuluyordu, erişim yavaştı"
+      ]
+    },
+    "solution": {
+      "title": "Çözümümüz",
+      "description": "Dijital klinik yönetimi ve hasta portalı:",
+      "points": [
+        "Hastaların online olarak randevu alıp yönetebildiği bir hasta portalı geliştirildi",
+        "Tüm hasta verilerini tek bir yerde toplayan basit bir EMR (Elektronik Medikal Kayıt) sistemi kuruldu"
+      ]
+    },
+    "result": {
+      "title": "Somut Sonuçlar",
+      "description": "Dijital dönüşümün sağlık hizmetlerine etkisi:",
+      "metrics": [
+        {
+          "value": "%70",
+          "label": "Telefonla randevu trafiği azaldı"
+        },
+        {
+          "value": "%80",
+          "label": "Hasta geçmişine erişim süresi kısaldı"
+        },
+        {
+          "value": "%100",
+          "label": "Randevu çakışması önlendi"
+        }
+      ],
+      "additionalBenefits": [
+        "Telefonla randevu trafiği %70 azaldı ve randevu çakışmaları tamamen ortadan kalktı",
+        "Doktorların hasta geçmişine ulaşma süresi %80 kısaldı"
+      ]
+    }
+  }
+]

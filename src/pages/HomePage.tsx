@@ -3,7 +3,6 @@ import ClientsMarquee from '../components/ClientsMarquee';
 import About from '../components/About';
 import Sectors from '../components/Sectors';
 import Blog from '../components/Blog';
-import Contact from '../components/Contact';
 import Map from '../components/Map';
 
 const HomePage = () => (
@@ -13,7 +12,6 @@ const HomePage = () => (
     <About />
     <Sectors />
     <Blog />
-    <Contact />
     <Map />
   </>
 );

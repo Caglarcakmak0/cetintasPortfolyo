@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
@@ -9,49 +10,43 @@ import FadeContent from '@/animations/FadeContent';
 
 const Sectors = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+  const navigate = useNavigate();
 
   const sectors = [
     {
-      id: '1',
-      title: 'Savunma Sanayi',
-      description: 'Yüksek regülasyonlu, kalite ve izlenebilirlik gerektiren yapılarda ERP ve dijital dönüşüm projeleri.',
-      features: ['Ürün ağaçları ve üretim izlenebilirliği', 'Kalite, dokümantasyon ve iç denetim entegrasyonu', 'Tedarik zinciri ve sözleşme yönetimi'],
-      backgroundImage: 'https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1200'
-    },
-    {
-      id: '2',
+      id: 'uretim-sektoru',
       title: 'Üretim Sektörü',
-      description: 'Makine parkı, IoT ve üretim verisini ERP ile aynı çatı altında birleştiren projeler.',
-      features: ['MRP, kapasite planlama ve çizelgeleme', 'OEE ve üretim verimliliği takibi', 'IoT & saha verisi entegrasyonu'],
+      description: 'Dağınık stok yönetiminden gerçek zamanlı üretim kontrolüne geçiş.',
+      features: ['Uçtan uca ERP entegrasyonu', 'Gerçek zamanlı veri girişi', 'Stok doğruluğu %99.2'],
       backgroundImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200'
     },
     {
-      id: '3',
-      title: 'Gıda ve Hızlı Tüketim (FMCG)',
-      description: 'Son kullanma tarihi, parti takibi ve hızlı dağıtım gerektiren FMCG sektörüne özel ERP çözümleri.',
-      features: ['Parti ve seri numarası takibi', 'Depo yönetimi ve raf ömrü kontrolü', 'Hızlı sipariş ve dağıtım entegrasyonu'],
-      backgroundImage: 'https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=1200'
+      id: 'lojistik-dagitim',
+      title: 'Lojistik ve Dağıtım',
+      description: 'Manuel raporlamadan veriye dayalı rota optimizasyonuna.',
+      features: ['İş Zekası platformu', 'Rota optimizasyonu', 'Yakıt maliyetlerinde %15 tasarruf'],
+      backgroundImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200'
     },
     {
-      id: '4',
+      id: 'perakende-eticaret',
+      title: 'Perakende ve E-Ticaret',
+      description: 'Ayrık kanallardan bütünleşik müşteri deneyimine (Omni-Channel).',
+      features: ['Omni-channel stok yönetimi', 'Merkezi CRM platformu', 'Müşteri sadakati %25 arttı'],
+      backgroundImage: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=1200'
+    },
+    {
+      id: 'profesyonel-hizmetler',
       title: 'Profesyonel Hizmetler',
-      description: 'Danışmanlık, hukuk, muhasebe ve mühendislik firmalarına özel proje ve kaynak yönetimi çözümleri.',
-      features: ['Proje bazlı maliyet ve zaman takibi', 'Kaynak planlama ve kapasite yönetimi', 'Müşteri portföyü ve CRM entegrasyonu'],
+      description: 'Proje kaosundan kârlılık analizine geçiş.',
+      features: ['Proje yönetim sistemi', 'Otomatik faturalama', 'Faturalama 7 günden 1 güne indi'],
       backgroundImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200'
     },
     {
-      id: '5',
+      id: 'saglik-hizmetleri',
       title: 'Sağlık Hizmetleri',
-      description: 'Hasta yönetimi, medikal stok takibi ve uyumluluk gereksinimlerini karşılayan sağlık sektörü çözümleri.',
-      features: ['Hasta kayıt ve randevu yönetimi', 'Medikal cihaz ve ilaç stok takibi', 'KVKK ve sağlık regülasyonları uyumu'],
+      description: 'Manuel randevudan dijital klinik yönetimine.',
+      features: ['Online hasta portalı', 'Elektronik Medikal Kayıt (EMR)', 'Randevu trafiği %70 azaldı'],
       backgroundImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200'
-    },
-    {
-      id: '6',
-      title: 'Lojistik ve Dağıtım',
-      description: 'Depo, filo ve sevkiyat süreçlerini tek platformda yöneten lojistik operasyon çözümleri.',
-      features: ['Araç ve rota optimizasyonu', 'Depo yönetimi ve barkod sistemi', 'Gerçek zamanlı sevkiyat takibi'],
-      backgroundImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200'
     }
   ];
 
@@ -119,7 +114,11 @@ const Sectors = () => {
               >
                 {sectors.map((sector) => (
                   <SwiperSlide key={sector.id}>
-                    <div className="sector-card">
+                    <div 
+                      className="sector-card"
+                      onClick={() => navigate(`/sector/${sector.id}`)}
+                      style={{ cursor: 'pointer' }}
+                    >
                       <div
                         className="sector-bg"
                         style={{ backgroundImage: `url(${sector.backgroundImage})` }}

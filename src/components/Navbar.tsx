@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavItem } from '@/types';
 import AnimatedContent from '@/animations/AnimatedContent';
+import SplitText from '@/animations/SplitText';
 
 interface NavbarProps {
   items: NavItem[];
@@ -47,7 +48,20 @@ const Navbar = ({ items }: NavbarProps) => {
         <div className="container">
           <div className="nav-content">
             <div className="logo">
-              <Link to="/" className="logo-text">Koray Çetintaş</Link>
+              <Link to="/" className="logo-text">
+                <SplitText
+                  text="Koray Çetintaş"
+                  tag="span"
+                  splitType="chars"
+                  delay={50}
+                  duration={0.5}
+                  ease="power2.out"
+                  from={{ opacity: 0, y: 20 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0}
+                  textAlign="left"
+                />
+              </Link>
             </div>
             <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`} id="navMenu">
               {items.map((item) => {

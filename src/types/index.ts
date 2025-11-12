@@ -62,3 +62,41 @@ export interface Location {
   description: string;
   coordinates: [number, number];
 }
+
+export interface CaseStudy {
+  id: string;
+  title: string;
+  subtitle: string;
+  heroImage: string;
+  date?: string;
+  author?: string;
+  challenge: {
+    title: string;
+    description: string;
+    points: string[];
+  };
+  solution: {
+    title: string;
+    description: string;
+    points: string[];
+  };
+  result: {
+    title: string;
+    description: string;
+    metrics: {
+      value: string;
+      label: string;
+    }[];
+    additionalBenefits: string[];
+  };
+  architecture?: {
+    title: string;
+    description: string;
+    components: {
+      name: string;
+      description: string;
+      technologies: string[];
+    }[];
+    integrations: string[];
+  };
+}
