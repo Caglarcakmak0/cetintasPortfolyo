@@ -104,21 +104,9 @@ const AboutPage = () => {
               <p>
                 Kurucusu olduğu Çetintaş Yazılım Danışmanlık, Didoda Bilgi Teknolojileri Ltd. (KKTC) ve Didoda Bilgi Teknolojileri A.Ş. (Türkiye) aracılığıyla; işletmelerin dijital dönüşüm ve ERP projelerini uçtan uca yöneten, yenilikçi ve sürdürülebilir sistemler tasarlamakta ve hayata geçirmektedir. Ayrıca bağımsız yönetim kurulu üyesi olarak, dijitalleşmenin sadece teknik değil, yönetsel düzeyde de kalıcı olmasını desteklemektedir.
               </p>
-
-              <div style={{height: '50px'}}></div>
-
-
-              <h2 className="section-title">Öne Çıkan Başlıklar</h2>
-              <div className="role-badges" style={{ marginTop: '1rem' }}>
-                <span className="role-badge">Kurumsal dijital dönüşüm stratejisi ve sistem tasarımı</span>
-                <span className="role-badge">ERP seçimi, uyarlaması ve entegrasyonu</span>
-                <span className="role-badge">Yapay zekâ tabanlı karar destek sistemleri</span>
-                <span className="role-badge">IoT destekli akıllı fabrika çözümleri</span>
-                <span className="role-badge">Kurumsal yönetişim, risk ve stratejik yönetim</span>
-              </div>
             </div>
           </FadeContent>
-          <div style={{height: '150px'}}></div>
+          <div style={{height: window.innerWidth > 768 ? '150px' : '75px'}}></div>
 
 
           {/* Uzmanlık Alanları */}
@@ -142,8 +130,8 @@ const AboutPage = () => {
             <div className="expertise-grid">
               <AnimatedContent 
                 distance={150} 
-                direction="horizontal" 
-                reverse={true} 
+                direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
+                reverse={window.innerWidth > 768} 
                 duration={1.2} 
                 ease="power3.out" 
                 initialOpacity={0} 
@@ -180,7 +168,7 @@ const AboutPage = () => {
                 animateOpacity 
                 scale={1.05} 
                 threshold={0.2} 
-                delay={0.2}
+                delay={window.innerWidth > 768 ? 0.2 : 0}
               >
                 <div className="expertise-card">
                   <div className="expertise-icon">
@@ -202,7 +190,7 @@ const AboutPage = () => {
 
               <AnimatedContent 
                 distance={150} 
-                direction="horizontal" 
+                direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
                 reverse={false} 
                 duration={1.2} 
                 ease="power3.out" 
@@ -210,7 +198,7 @@ const AboutPage = () => {
                 animateOpacity 
                 scale={1.05} 
                 threshold={0.2} 
-                delay={0.4}
+                delay={window.innerWidth > 768 ? 0.4 : 0}
               >
                 <div className="expertise-card">
                   <div className="expertise-icon">
@@ -282,7 +270,7 @@ const AboutPage = () => {
                 animateOpacity 
                 scale={1.02} 
                 threshold={0.2} 
-                delay={0.2}
+                delay={window.innerWidth > 768 ? 0.2 : 0}
               >
                 <div className="roadmap-step">
                   <div className="step-number">02</div>
@@ -302,7 +290,7 @@ const AboutPage = () => {
                 animateOpacity 
                 scale={1.02} 
                 threshold={0.2} 
-                delay={0.4}
+                delay={window.innerWidth > 768 ? 0.4 : 0}
               >
                 <div className="roadmap-step">
                   <div className="step-number">03</div>
@@ -322,7 +310,7 @@ const AboutPage = () => {
                 animateOpacity 
                 scale={1.02} 
                 threshold={0.2} 
-                delay={0.6}
+                delay={window.innerWidth > 768 ? 0.6 : 0}
               >
                 <div className="roadmap-step">
                   <div className="step-number">04</div>

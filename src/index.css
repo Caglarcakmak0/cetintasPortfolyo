@@ -224,6 +224,7 @@ a {
 
 /* Mobile Menu Video Section */
 .mobile-menu-video {
+    display: none; /* Hide by default on desktop */
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-xl);
     border-top: 1px solid var(--border-color);
@@ -2465,6 +2466,10 @@ a {
 
     .mobile-menu-btn {
         display: flex;
+    }
+
+    .mobile-menu-video {
+        display: block; /* Show video section on mobile */
     }
 
     .hero-content {

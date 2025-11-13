@@ -47,7 +47,7 @@ const SectorPage = () => {
   }, [sectorId]);
 
   const breadcrumbItems = [
-    { label: 'Sektörler', path: '/#sectors' },
+    { label: 'Sektörler', path: '/sectors' },
     { label: sectorTitle }
   ];
 

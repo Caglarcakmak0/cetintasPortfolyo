@@ -68,7 +68,7 @@ const Blog: React.FC = () => {
 
         <div className="blog-grid">
           {blogPosts.map((post, index) => (
-            <AnimatedContent distance={150} direction="horizontal" reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1.1} threshold={0.2} delay={window.innerWidth > 768 ? index * 0.3 : 0}>
+            <AnimatedContent distance={150} direction={window.innerWidth > 768 ? "horizontal" : "vertical"} reverse={false} duration={1.2} ease="power3.out" initialOpacity={0} animateOpacity scale={1.1} threshold={0.2} delay={window.innerWidth > 768 ? index * 0.3 : 0}>
 
               <article key={post.id} className="blog-card">
                 <div className="blog-image">

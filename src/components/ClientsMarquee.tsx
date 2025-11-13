@@ -9,7 +9,7 @@ const ClientsMarquee: React.FC = () => {
 
   return (
     <section className="clients-section">
-      <div style={{ height: '100px' }}></div>
+      <div style={{ height: window.innerWidth > 768 ? '100px' : '50px' }}></div>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
         <SplitText
@@ -37,7 +37,8 @@ const ClientsMarquee: React.FC = () => {
           threshold={0.1}
         />
       </div>
-      <div style={{ height: '50px' }}></div>
+      
+      <div style={{ height: window.innerWidth > 768 ? '50px' : '25px' }}></div>
 
       <AnimatedContent
         distance={150}
@@ -69,7 +70,7 @@ const ClientsMarquee: React.FC = () => {
           ))}
         </Marquee>
       </AnimatedContent>
-      <div style={{ height: '50px' }}></div>
+      <div style={{ height: window.innerWidth > 768 ? '50px' : '25px' }}></div>
       <AnimatedContent
         distance={150}
         direction="vertical"

@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
 import Layout from './components/Layout';
 import { PageSEO } from './components/SEO/PageSEO';
 import { NavItem, SocialLink, FooterLink } from './types';
@@ -19,6 +19,12 @@ const ReferencesPage = lazy(() => import('./pages/ReferencesPage'));
 
 
 const App = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
   // Navigation items
   const navItems: NavItem[] = [
     { id: '1', label: 'Ana Sayfa', href: '/', active: true },
@@ -43,7 +49,6 @@ const App = () => {
   ];
 
   return (
-    <Router>
       <Layout 
         navItems={navItems} 
         socialLinks={socialLinks} 
@@ -69,7 +74,6 @@ const App = () => {
           </Routes>
         </Suspense>
       </Layout>
-    </Router>
   );}
 
 
