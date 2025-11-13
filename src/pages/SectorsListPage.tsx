@@ -88,7 +88,7 @@ const SectorsListPage = () => {
                       style={{ backgroundImage: `url(${sector.backgroundImage})` }}
                     />
                     <div className="sector-overlay">
-                      <h3 className="sector-title">{sector.title}</h3>
+                      <h3 className="sector-title">{sector.title} </h3>
                       <div className="sector-details">
                         <p className="sector-description">{sector.description}</p>
                         <ul className="sector-features">

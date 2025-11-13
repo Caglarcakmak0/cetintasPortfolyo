@@ -81,6 +81,18 @@
       "sector": "Gıda"
     },
     {
+      "id": 21,
+      "name": "Signal",
+      "logo": "assets/logos/signal.svg",
+      "sector": "Gıda"
+    },
+    {
+      "id": 22,
+      "name": "Magnum",
+      "logo": "assets/logos/magnum.svg",
+      "sector": "Gıda"
+    },
+    {
       "id": 14,
       "name": "Novartis",
       "logo": "assets/logos/Novartis-Logo.svg.png",
