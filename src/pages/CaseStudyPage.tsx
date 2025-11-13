@@ -19,7 +19,7 @@ const CaseStudyPage = () => {
       <Breadcrumb
         title={caseStudy.title}
         breadcrumb={[
-          { label: 'Sektörler', path: '/#sectors' },
+          { label: 'Sektörler', path: '/sectors' },
           { label: caseStudy.title }
         ]}
         image={caseStudy.heroImage}
@@ -50,8 +50,8 @@ const CaseStudyPage = () => {
             <div className="case-study-block">
               <AnimatedContent
                 distance={150}
-                direction="horizontal"
-                reverse={true}
+                direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
+                reverse={window.innerWidth > 768}
                 duration={1.2}
                 ease="power3.out"
                 initialOpacity={0}
@@ -88,7 +88,7 @@ const CaseStudyPage = () => {
             <div className="case-study-block">
               <AnimatedContent
                 distance={150}
-                direction="horizontal"
+                direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
                 reverse={false}
                 duration={1.2}
                 ease="power3.out"
@@ -126,8 +126,8 @@ const CaseStudyPage = () => {
           <div className="case-study-block">
             <AnimatedContent
               distance={150}
-              direction="horizontal"
-              reverse={true}
+              direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
+              reverse={window.innerWidth > 768}
               duration={1.2}
               ease="power3.out"
               initialOpacity={0}
@@ -180,7 +180,7 @@ const CaseStudyPage = () => {
             <div className="case-study-block">
               <AnimatedContent
                 distance={150}
-                direction="horizontal"
+                direction={window.innerWidth > 768 ? "horizontal" : "vertical"}
                 reverse={false}
                 duration={1.2}
                 ease="power3.out"

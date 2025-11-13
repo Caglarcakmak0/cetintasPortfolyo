@@ -56,51 +56,51 @@ const SectorsListPage = () => {
       />
 
       <section className="sectors-content">
-        <div className="sectors-custom-container">
-          <AnimatedContent distance={80} direction="vertical" duration={0.8} ease="power2.out" initialOpacity={0} animateOpacity>
-            <div className="sectors-intro">
-              <h2 className="sectors-intro-title">Farklı Sektörlerde Dijital Dönüşüm</h2>
-              <p className="sectors-intro-text">
-                Her sektörün kendine özgü ihtiyaçları ve zorlukları vardır. Farklı sektörlerde yürüttüğüm projelerin 
-                ortak noktası; karmaşık sistemleri sadeleştirmek ve kurumun gerçek ihtiyacına uygun dijital çözümler tasarlamaktır.
-              </p>
-            </div>
-          </AnimatedContent>
+        <div className="container">
+            <AnimatedContent distance={80} direction="vertical" duration={0.8} ease="power2.out" initialOpacity={0} animateOpacity>
+              <div className="sectors-intro">
+                <h2 className="sectors-intro-title">Farklı Sektörlerde Dijital Dönüşüm</h2>
+                <p className="sectors-intro-text">
+                  Her sektörün kendine özgü ihtiyaçları ve zorlukları vardır. Farklı sektörlerde yürüttüğüm projelerin 
+                  ortak noktası; karmaşık sistemleri sadeleştirmek ve kurumun gerçek ihtiyacına uygun dijital çözümler tasarlamaktır.
+                </p>
+              </div>
+            </AnimatedContent>
 
-          <div className="sectors-grid">
-            {sectors.map((sector, index) => (
-              <AnimatedContent
-                key={sector.id}
-                distance={80}
-                direction="vertical"
-                duration={0.8}
-                ease="power2.out"
-                initialOpacity={0}
-                animateOpacity
-                delay={index * 0.15}
-              >
-                <div
-                  className="sector-card"
-                  onClick={() => navigate(`/sector/${sector.id}`)}
+            <div className="sectors-grid">
+              {sectors.map((sector, index) => (
+                <AnimatedContent
+                  key={sector.id}
+                  distance={80}
+                  direction="vertical"
+                  duration={0.8}
+                  ease="power2.out"
+                  initialOpacity={0}
+                  animateOpacity
+                  delay={(3 % index) * 0.15}
                 >
-                  <div 
-                    className="sector-bg"
-                    style={{ backgroundImage: `url(${sector.backgroundImage})` }}
-                  />
-                  <div className="sector-overlay">
-                    <h3 className="sector-title">{sector.title}</h3>
-                    <div className="sector-details">
-                      <p className="sector-description">{sector.description}</p>
-                      <ul className="sector-features">
-                        {sector.features.map((feature, idx) => (
-                          <li key={idx}>{feature}</li>
-                        ))}
-                      </ul>
+                  <div
+                    className="sector-card"
+                    onClick={() => navigate(`/sector/${sector.id}`)}
+                  >
+                    <div 
+                      className="sector-bg"
+                      style={{ backgroundImage: `url(${sector.backgroundImage})` }}
+                    />
+                    <div className="sector-overlay">
+                      <h3 className="sector-title">{sector.title}</h3>
+                      <div className="sector-details">
+                        <p className="sector-description">{sector.description}</p>
+                        <ul className="sector-features">
+                          {sector.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </AnimatedContent>
-            ))}
+                </AnimatedContent>
+              ))}
           </div>
         </div>
       </section>
@@ -139,7 +139,7 @@ const SectorsListPage = () => {
 
         .sectors-grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
         }
 

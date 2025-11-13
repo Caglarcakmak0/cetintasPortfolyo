@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { SocialLink, FooterLink } from '@/types';
 import { Linkedin, Github } from 'lucide-react';
@@ -10,16 +9,8 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
   const currentYear = new Date().getFullYear();
-  const [showBackToTop, setShowBackToTop] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.pageYOffset > 300);
-    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
@@ -110,15 +101,7 @@ const Footer: React.FC<FooterProps> = ({ socialLinks, footerLinks }) => {
         </div>
       </footer>
 
-      {showBackToTop && (
-        <button 
-          className="back-to-top"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          aria-label="Sayfanın başına dön"
-        >
-          ↑
-        </button>
-      )}
+
 
     </>
   );

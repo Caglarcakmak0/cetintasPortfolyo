@@ -3032,3 +3032,36 @@ a {
         font-size: var(--font-size-base);
     }
 }
+
+
+.fadeinleftblur{
+    animation: fadeinleftblur 1s ease-out forwards;
+}
+
+@keyframes fadeinleftblur{
+    from{
+        opacity: 0;
+        scale: 1.1;
+        transform: translateX(-100px);
+        filter: blur(10px);
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0px);
+        filter: blur(0px);
+    }
+}
+
+.fadeinrightblur{
+    animation: fadeinrightblur 1s ease-out forwards;
+}
+
+@keyframes fadeinrightblur{
+    from{
+        opacity: 0;
+        scale: 1.1;
+        transform: translateX(100px);
+        filter: blur(10px);
+    }
+}
