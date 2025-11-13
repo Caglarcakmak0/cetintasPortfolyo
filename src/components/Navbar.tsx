@@ -89,6 +89,23 @@ const Navbar = ({ items }: NavbarProps) => {
                   </li>
                 );
               })}
+              
+              {/* Video Section in Mobile Menu */}
+              <li className="mobile-menu-video">
+                <div className="mobile-video-wrapper">
+                  <h4 className="mobile-video-title">Tanıtım Videosu</h4>
+                  <div className="video-container">
+                    <iframe 
+                      src="https://www.youtube.com/embed/QZiVlOafGIQ?si=x0xcpYbIbgZxRK_D" 
+                      title="YouTube video player" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin" 
+                      allowFullScreen
+                    />
+                  </div>
+                </div>
+              </li>
             </ul>
             <button
               className={`mobile-menu-btn ${isMobileMenuOpen ? 'active' : ''}`}

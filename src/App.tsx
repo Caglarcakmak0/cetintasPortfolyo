@@ -13,6 +13,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
 const SectorPage = lazy(() => import('./pages/SectorPage'));
 const SectorsListPage = lazy(() => import('./pages/SectorsListPage'));
+const ReferencesPage = lazy(() => import('./pages/ReferencesPage'));
 
 
 
@@ -23,7 +24,7 @@ const App = () => {
     { id: '1', label: 'Ana Sayfa', href: '/', active: true },
     { id: '2', label: 'Hakkımda', href: '/about' },
     { id: '3', label: 'Sektörler', href: '/sectors' },
-    { id: '4', label: 'İçgörüler', href: '/blog' },
+    // { id: '4', label: 'İçgörüler', href: '/blog' },
     { id: '5', label: 'İletişim', href: '/contact' },
   ];
 
@@ -60,6 +61,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/sectors" element={<SectorsListPage />} />
             <Route path="/sector/:sectorId" element={<SectorPage />} />
+            <Route path="/referanslar" element={<ReferencesPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/map" element={<MapPage />} />
             <Route path="/contact" element={<ContactPage />} />

@@ -13,7 +13,7 @@ const ClientsMarquee: React.FC = () => {
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
         <SplitText
-          text="GÜVENİLEN İŞ ORTAKLIKLARIM"
+          text="KURUMSAL İŞ ORTAKLARIM"
           className="sectors-label"
           delay={200}
           duration={1.5}
@@ -100,6 +100,29 @@ const ClientsMarquee: React.FC = () => {
           ))}
         </Marquee>
       </AnimatedContent>
+      <div style={{ height: '50px' }}></div>
+      
+      <AnimatedContent
+        distance={50}
+        direction="vertical"
+        reverse={false}
+        duration={0.8}
+        ease="power2.out"
+        initialOpacity={0}
+        animateOpacity
+        threshold={0.2}
+        delay={0.2}
+      >
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <a 
+            href="/referanslar"
+            className="btn btn-outline inline-btn"
+          >
+            Tümünü Gör
+          </a>
+        </div>
+      </AnimatedContent>
+      
       <div style={{ height: '100px' }}></div>
 
     </section>

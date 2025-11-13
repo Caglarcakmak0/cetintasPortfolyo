@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Sectors from '../components/Sectors';
-import Blog from '../components/Blog';
+// import Blog from '../components/Blog';
 
 // Lazy loading for heavy components
 const ClientsMarquee = lazy(() => import('../components/ClientsMarquee'));
@@ -16,7 +16,7 @@ const HomePage = () => (
     </Suspense>
     <About />
     <Sectors />
-    <Blog />
+    {/* <Blog /> */}
     <Suspense fallback={<div className="component-loading">Harita yükleniyor...</div>}>
       <Map />
     </Suspense>

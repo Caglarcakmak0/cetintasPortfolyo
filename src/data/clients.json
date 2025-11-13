@@ -3,104 +3,124 @@
     {
       "id": 1,
       "name": "Altair Defense",
-      "logo": "assets/logos/altairdefense.jpg"
+      "logo": "assets/logos/altairdefense.jpg",
+      "sector": "Savunma Sanayii"
     },
     {
       "id": 2,
       "name": "Sarsilmaz",
-      "logo": "assets/logos/sarsılmaz.png"
+      "logo": "assets/logos/sarsılmaz.png",
+      "sector": "Savunma Sanayii"
     },
     {
       "id": 3,
       "name": "Mertsav",
-      "logo": "assets/logos/mertsav.png"
+      "logo": "assets/logos/mertsav.png",
+      "sector": "Savunma Sanayii"
     },
     {
       "id": 4,
       "name": "Dünyasan Savunma",
-      "logo": "assets/logos/dünyasan-savunma.jpg"
+      "logo": "assets/logos/dünyasan-savunma.jpg",
+      "sector": "Savunma Sanayii"
     },
     {
       "id": 5,
       "name": "Özer Elektronik",
-      "logo": "assets/logos/özer-elektronik.png"
+      "logo": "assets/logos/özer-elektronik.png",
+      "sector": "Elektronik ve Teknoloji"
     },
     {
       "id": 6,
       "name": "Meditac",
-      "logo": "assets/logos/meditac.jpg"
+      "logo": "assets/logos/meditac.jpg",
+      "sector": "Sağlık"
     },
     {
       "id": 7,
       "name": "Ağaoğlu",
-      "logo": "assets/logos/Agaoglu_logo-png.png"
+      "logo": "assets/logos/Agaoglu_logo-png.png",
+      "sector": "İnşaat ve Enerji"
     },
     {
       "id": 8,
       "name": "Karadeniz Holding",
-      "logo": "assets/logos/karadeniz-holing.jpg"
+      "logo": "assets/logos/karadeniz-holing.jpg",
+      "sector": "İnşaat ve Enerji"
     },
     {
       "id": 9,
       "name": "Best Elektrik",
-      "logo": "assets/logos/best_elektrik_logo.png"
+      "logo": "assets/logos/best_elektrik_logo.png",
+      "sector": "Elektronik ve Teknoloji"
     },
     {
       "id": 10,
       "name": "YKK",
-      "logo": "assets/logos/ykk.jpg"
+      "logo": "assets/logos/ykk.jpg",
+      "sector": "Tekstil"
     }
   ],
   "row2": [
     {
       "id": 11,
       "name": "Yünsa",
-      "logo": "assets/logos/yünsa.svg"
+      "logo": "assets/logos/yünsa.svg",
+      "sector": "Tekstil"
     },
     {
       "id": 12,
       "name": "Knorr",
-      "logo": "assets/logos/knorr.png"
+      "logo": "assets/logos/knorr.png",
+      "sector": "Gıda"
     },
     {
       "id": 13,
       "name": "Unilever",
-      "logo": "assets/logos/unillever.png"
+      "logo": "assets/logos/unillever.png",
+      "sector": "Gıda"
     },
     {
       "id": 14,
       "name": "Novartis",
-      "logo": "assets/logos/Novartis-Logo.svg.png"
+      "logo": "assets/logos/Novartis-Logo.svg.png",
+      "sector": "Sağlık"
     },
     {
       "id": 15,
       "name": "Vitalab",
-      "logo": "assets/logos/vitalab.jpg"
+      "logo": "assets/logos/vitalab.jpg",
+      "sector": "Sağlık"
     },
     {
       "id": 16,
       "name": "AXA Sigorta",
-      "logo": "assets/logos/axa-sigorta.png"
+      "logo": "assets/logos/axa-sigorta.png",
+      "sector": "Finans ve Sigorta"
     },
     {
       "id": 17,
       "name": "Anadolu Sigorta",
-      "logo": "assets/logos/Anadolu_Sigorta_logo.svg.png"
+      "logo": "assets/logos/Anadolu_Sigorta_logo.svg.png",
+      "sector": "Finans ve Sigorta"
     },
     {
       "id": 18,
       "name": "Innomind",
-      "logo": "assets/logos/innomindLogo.png"
+      "logo": "assets/logos/innomindLogo.png",
+      "sector": "Elektronik ve Teknoloji"
     },
     {
       "id": 19,
       "name": "Corning Optik",
-      "logo": "assets/logos/CORNİNG-OPTİK-İLETİŞİM-SAN.-LTD.-ŞTİ..jpg"
+      "logo": "assets/logos/CORNİNG-OPTİK-İLETİŞİM-SAN.-LTD.-ŞTİ..jpg",
+      "sector": "Elektronik ve Teknoloji"
     },
     {
       "id": 20,
       "name": "U4",
-      "logo": "assets/logos/u4.png"
+      "logo": "assets/logos/u4.png",
+      "sector": "Elektronik ve Teknoloji"
     }
   ]
 }
