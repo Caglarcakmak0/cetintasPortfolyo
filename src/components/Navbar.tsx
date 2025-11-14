@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { NavItem } from '@/types';
 import AnimatedContent from '@/animations/AnimatedContent';
-import SplitText from '@/animations/SplitText';
 
 interface NavbarProps {
   items: NavItem[];
