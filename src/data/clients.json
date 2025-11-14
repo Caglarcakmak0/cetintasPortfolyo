@@ -47,7 +47,9 @@
       "name": "Karadeniz Holding",
       "logo": "assets/logos/karadeniz-holing.jpg",
       "sector": "İnşaat ve Enerji"
-    },
+    }
+  ],
+  "row2": [
     {
       "id": 9,
       "name": "Best Elektrik",
@@ -59,9 +61,7 @@
       "name": "YKK",
       "logo": "assets/logos/ykk.jpg",
       "sector": "Tekstil"
-    }
-  ],
-  "row2": [
+    },
     {
       "id": 11,
       "name": "Yünsa",
@@ -78,18 +78,6 @@
       "id": 13,
       "name": "Unilever",
       "logo": "assets/logos/unillever.png",
-      "sector": "Gıda"
-    },
-    {
-      "id": 21,
-      "name": "Signal",
-      "logo": "assets/logos/signal.svg",
-      "sector": "Gıda"
-    },
-    {
-      "id": 22,
-      "name": "Magnum",
-      "logo": "assets/logos/magnum.svg",
       "sector": "Gıda"
     },
     {

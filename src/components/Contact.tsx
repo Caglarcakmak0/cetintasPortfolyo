@@ -1,26 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-  };
+  const whatsappNumber = '905492211008';
+  const whatsappMessage = 'Merhaba Koray Bey, Erp Danışmanlığı hakkında bilgi almak istiyorum.';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <section id="contact" className="contact-section">
@@ -41,15 +24,17 @@ const Contact: React.FC = () => {
                 <div className="contact-icon">📧</div>
                 <div>
                   <h4>E-posta</h4>
-                  <a href="mailto:koray@koraycetintas.com">koray@koraycetintas.com</a>
+                  <a href="mailto:koray@cetintas.com.tr">koray@cetintas.com.tr</a>
                 </div>
               </div>
               
               <div className="contact-item">
                 <div className="contact-icon">📱</div>
                 <div>
-                  <h4>Telefon</h4>
-                  <a href="tel:+905321234567">+90 532 123 45 67</a>
+                  <h4>Telefon / WhatsApp</h4>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                    +90 549 221 1008
+                  </a>
                 </div>
               </div>
               
@@ -63,7 +48,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="contact-form">
+          {/* Form is temporarily hidden */}
+          {/* <div className="contact-form">
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Adınız Soyadınız *</label>
@@ -128,7 +114,7 @@ const Contact: React.FC = () => {
                 Mesajı Gönder
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

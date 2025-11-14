@@ -859,6 +859,12 @@ a {
     font-family: var(--font-family-montserrat);
 }
 
+.sector-title-white {
+    color: white !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
 .sector-details {
     opacity: 1;
     transform: translateY(0);
@@ -1027,7 +1033,7 @@ a {
 }
 
 .contact-wrapper {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-2xl);
     background: white;
@@ -3121,6 +3127,8 @@ a {
 }
 
 .references-header {
+        display: grid;
+
     padding: var(--spacing-3xl) var(--spacing-2xl);
     text-align: center;
 }
@@ -3141,7 +3149,6 @@ a {
     color: var(--text-primary);
     margin-bottom: var(--spacing-xl);
     padding: 0;
-    border-bottom: 3px solid var(--primary-color);
     display: inline-block;
 }
 

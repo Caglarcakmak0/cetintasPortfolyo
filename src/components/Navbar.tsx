@@ -48,19 +48,8 @@ const Navbar = ({ items }: NavbarProps) => {
         <div className="container">
           <div className="nav-content">
             <div className="logo">
-              <Link to="/" className="logo-text">
-                <SplitText
-                  text="Koray Çetintaş"
-                  tag="span"
-                  splitType="chars"
-                  delay={50}
-                  duration={0.5}
-                  ease="power2.out"
-                  from={{ opacity: 0, y: 20 }}
-                  to={{ opacity: 1, y: 0 }}
-                  threshold={0}
-                  textAlign="left"
-                />
+              <Link to="/">
+                <h1 className="logo-text">Koray Çetintaş</h1>
               </Link>
             </div>
             <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`} id="navMenu">

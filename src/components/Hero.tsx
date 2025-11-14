@@ -14,7 +14,7 @@ const Hero = () => (
             </p>
 
             <div className="hero-buttons">
-              <a href="#contact" className="btn btn-primary">ERP Danışmanlığı Talep Et</a>
+              <a href="/contact" className="btn btn-primary">ERP Danışmanlığı Talep Et</a>
               <a href="#about" className="btn btn-secondary">Profesyonel Profilimi İncele</a>
             </div>
           </div>
