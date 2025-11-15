@@ -1,6 +1,12 @@
 <?php
 require_once 'config.php';
 
+// OPTIONS isteği için hemen yanıt ver (CORS preflight)
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
 $conn = getDBConnection();
 $method = $_SERVER['REQUEST_METHOD'];
 
