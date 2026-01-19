@@ -1,3 +1,15 @@
+/*
+Theme Name: Cetintas Portfolyo
+Theme URI: https://pixasoftware.com
+Author: Pixa Software
+Author URI: https://pixasoftware.com
+Description: Custom WordPress theme converted from React portfolio.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cetintas-portfolyo
+*/
+
 /* Inter Variable font is loaded via index.html */
 
 /* Page Loading Styles */
@@ -283,7 +295,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/assets/heroBg.png');
+    background-image: url('assets/heroBg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
