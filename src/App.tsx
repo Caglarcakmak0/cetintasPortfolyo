@@ -8,6 +8,8 @@ import { NavItem, SocialLink, FooterLink } from './types';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage'));
+const AdminPage = lazy(() => import('./pages/AdminPage'));
 const MapPage = lazy(() => import('./pages/MapPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage'));
@@ -30,7 +32,7 @@ const App = () => {
     { id: '1', label: 'Ana Sayfa', href: '/', active: true },
     { id: '2', label: 'Hakkımda', href: '/about' },
     { id: '3', label: 'Sektörler', href: '/sectors' },
-    // { id: '4', label: 'İçgörüler', href: '/blog' },
+    { id: '4', label: 'İçgörüler', href: '/blog' },
     { id: '5', label: 'İletişim', href: '/contact' },
   ];
 
@@ -49,31 +51,49 @@ const App = () => {
   ];
 
   return (
-      <Layout 
-        navItems={navItems} 
-        socialLinks={socialLinks} 
-        footerLinks={footerLinks}
-      >
-        <PageSEO />
+    <Routes>
+      {/* Admin sayfası Layout dışında */}
+      <Route path="/admin" element={
         <Suspense fallback={
           <div className="page-loading">
             <div className="loading-spinner"></div>
             <p>Yükleniyor...</p>
           </div>
         }>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/sectors" element={<SectorsListPage />} />
-            <Route path="/sector/:sectorId" element={<SectorPage />} />
-            <Route path="/referanslar" element={<ReferencesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/map" element={<MapPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/case-study/:id" element={<CaseStudyPage />} />
-          </Routes>
+          <AdminPage />
         </Suspense>
-      </Layout>
+      } />
+      
+      {/* Diğer sayfalar Layout içinde */}
+      <Route path="/*" element={
+        <Layout 
+          navItems={navItems} 
+          socialLinks={socialLinks} 
+          footerLinks={footerLinks}
+        >
+          <PageSEO />
+          <Suspense fallback={
+            <div className="page-loading">
+              <div className="loading-spinner"></div>
+              <p>Yükleniyor...</p>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/sectors" element={<SectorsListPage />} />
+              <Route path="/sector/:sectorId" element={<SectorPage />} />
+              <Route path="/referanslar" element={<ReferencesPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:id" element={<BlogDetailPage />} />
+              <Route path="/map" element={<MapPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/case-study/:id" element={<CaseStudyPage />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      } />
+    </Routes>
   );}
 
 

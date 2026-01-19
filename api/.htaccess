@@ -1,0 +1,49 @@
+# API için .htaccess
+
+# DELETE metoduna izin ver (Apache 2.2 ve 2.4 uyumlu)
+<IfModule mod_access_compat.c>
+    <Limit GET POST PUT DELETE OPTIONS>
+        Order allow,deny
+        Allow from all
+    </Limit>
+</IfModule>
+
+<IfModule mod_authz_core.c>
+    <LimitExcept GET POST PUT DELETE OPTIONS>
+        Require all denied
+    </LimitExcept>
+</IfModule>
+
+<IfModule mod_headers.c>
+    # CORS headers
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+    Header set Access-Control-Max-Age "3600"
+    
+    # Authorization header'ını PHP'ye aktar
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # DELETE ve OPTIONS metodlarına izin ver
+    RewriteCond %{REQUEST_METHOD} ^(DELETE|OPTIONS)$
+    RewriteRule .* - [L]
+    
+    # Authorization header'ını PHP'ye aktar (alternatif yöntem)
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%1]
+    
+    # OPTIONS isteği için hemen yanıt ver
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>
+
+# PHP ayarları
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>
+
